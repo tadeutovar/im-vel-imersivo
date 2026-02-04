@@ -12,39 +12,39 @@ const BenefitsSection = () => {
   const benefits = [
     {
       icon: Eye,
-      title: "Mais Interesse e Engajamento",
+      title: "Melhor Apresentação do Imóvel",
       description:
-        "Anúncios com tours virtuais recebem até 3x mais visualizações e mantêm os visitantes por mais tempo.",
+        "O tour virtual permite apresentar todos os ambientes de forma organizada e profissional, valorizando cada detalhe.",
     },
     {
       icon: Clock,
       title: "Economia de Tempo",
       description:
-        "Reduza visitas presenciais desnecessárias. Compradores já chegam decididos após explorar o imóvel online.",
+        "Interessados podem conhecer o imóvel virtualmente antes de agendar uma visita presencial, otimizando o tempo de todos.",
     },
     {
       icon: Award,
-      title: "Diferenciação Profissional",
+      title: "Mais Profissionalismo",
       description:
-        "Destaque-se da concorrência com apresentações de alto nível que transmitem profissionalismo.",
+        "Diferencie seus anúncios com uma apresentação moderna que transmite cuidado e atenção aos detalhes.",
     },
     {
       icon: TrendingUp,
-      title: "Maior Percepção de Valor",
+      title: "Melhor Percepção de Valor",
       description:
-        "A experiência imersiva aumenta a valorização percebida do imóvel pelos compradores.",
+        "A experiência imersiva ajuda o interessado a visualizar o espaço de forma completa, elevando a percepção de valor.",
     },
     {
       icon: Globe,
-      title: "Disponibilidade 24 Horas",
+      title: "Disponibilidade Permanente",
       description:
-        "Seus clientes podem visitar o imóvel a qualquer hora, de qualquer lugar do mundo.",
+        "O tour virtual fica disponível para acesso a qualquer hora, de qualquer lugar.",
     },
     {
       icon: Smartphone,
-      title: "Multi-plataforma",
+      title: "Compatibilidade Total",
       description:
-        "Funciona perfeitamente em celulares, tablets e computadores, sem instalação.",
+        "Funciona em celulares, tablets e computadores, sem necessidade de instalação de aplicativos.",
     },
   ];
 
@@ -59,14 +59,13 @@ const BenefitsSection = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-            Por Que Escolher
+            Benefícios
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
             Por Que Usar um Tour Virtual 360°?
           </h2>
           <p className="text-lg text-muted-foreground">
-            Entenda como a tecnologia 360° transforma a apresentação dos seus
-            imóveis e acelera suas vendas.
+            Conheça as vantagens de apresentar seus imóveis com tecnologia 360°.
           </p>
         </motion.div>
 

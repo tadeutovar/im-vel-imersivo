@@ -5,46 +5,45 @@ import { Check, Star } from "lucide-react";
 const PricingSection = () => {
   const plans = [
     {
-      name: "Básico",
-      photos: "1 Foto 360°",
+      name: "Tour Virtual Completo",
       price: "300",
-      pricePerPhoto: "300",
+      priceLabel: "por tour",
+      description:
+        "Captação das imagens 360°, edição profissional, criação do tour virtual interativo e entrega do link pronto para uso.",
       features: [
-        "1 ambiente fotografado",
+        "Captação das imagens 360°",
+        "Edição profissional",
         "Tour virtual interativo",
-        "Link compartilhável",
-        "Compatível com todos dispositivos",
-        "Entrega em até 3 dias úteis",
+        "Link pronto para uso",
       ],
       popular: false,
     },
     {
-      name: "Profissional",
-      photos: "5 Fotos 360°",
-      price: "1.400",
-      pricePerPhoto: "280",
+      name: "Pacote com 5 Tours Virtuais",
+      price: "270",
+      priceLabel: "por tour",
+      description:
+        "Conjunto de cinco tours virtuais completos, com todas as etapas incluídas e valor reduzido por unidade.",
       features: [
-        "5 ambientes fotografados",
-        "Tour virtual integrado",
-        "Navegação entre ambientes",
-        "Pontos de informação",
-        "Link para portais imobiliários",
-        "Entrega em até 5 dias úteis",
+        "5 tours virtuais completos",
+        "Captação e edição incluídas",
+        "Links individuais por imóvel",
+        "Valor reduzido por unidade",
       ],
       popular: true,
     },
     {
-      name: "Premium",
-      photos: "10 Fotos 360°",
-      price: "2.500",
-      pricePerPhoto: "250",
+      name: "Pacote com 10 Tours Virtuais",
+      price: "250",
+      priceLabel: "por tour",
+      totalPrice: "2.500",
+      description:
+        "Pacote econômico para quem deseja padronizar vários imóveis com apresentação profissional.",
       features: [
-        "10 ambientes fotografados",
-        "Tour completo do imóvel",
-        "Navegação avançada",
-        "Planta baixa interativa",
-        "Suporte prioritário",
-        "Entrega em até 7 dias úteis",
+        "10 tours virtuais completos",
+        "Captação e edição incluídas",
+        "Links individuais por imóvel",
+        "Melhor custo-benefício",
       ],
       popular: false,
     },
@@ -64,11 +63,12 @@ const PricingSection = () => {
             Investimento
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Tabela de Preços
+            Planos e Investimento
           </h2>
           <p className="text-lg text-muted-foreground">
-            Preços transparentes e pacotes pensados para maximizar seu retorno
-            sobre o investimento.
+            Oferecemos planos simples e transparentes, com valores definidos por
+            tour virtual completo, garantindo previsibilidade e excelente
+            custo-benefício.
           </p>
         </motion.div>
 
@@ -90,7 +90,7 @@ const PricingSection = () => {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="inline-flex items-center gap-1 bg-gradient-gold px-4 py-1 rounded-full text-sm font-bold text-accent-foreground">
                     <Star className="w-4 h-4" />
-                    Mais Popular
+                    Recomendado
                   </span>
                 </div>
               )}
@@ -103,15 +103,6 @@ const PricingSection = () => {
                 >
                   {plan.name}
                 </h3>
-                <p
-                  className={`text-sm ${
-                    plan.popular
-                      ? "text-primary-foreground/70"
-                      : "text-muted-foreground"
-                  }`}
-                >
-                  {plan.photos}
-                </p>
               </div>
 
               <div className="text-center mb-6">
@@ -140,9 +131,30 @@ const PricingSection = () => {
                       : "text-muted-foreground"
                   }`}
                 >
-                  R$ {plan.pricePerPhoto}/foto
+                  {plan.priceLabel}
                 </p>
+                {plan.totalPrice && (
+                  <p
+                    className={`text-xs mt-1 ${
+                      plan.popular
+                        ? "text-primary-foreground/50"
+                        : "text-muted-foreground/70"
+                    }`}
+                  >
+                    Total: R$ {plan.totalPrice}
+                  </p>
+                )}
               </div>
+
+              <p
+                className={`text-sm mb-6 text-center ${
+                  plan.popular
+                    ? "text-primary-foreground/80"
+                    : "text-muted-foreground"
+                }`}
+              >
+                {plan.description}
+              </p>
 
               <ul className="space-y-3 mb-8">
                 {plan.features.map((feature, idx) => (
@@ -182,11 +194,11 @@ const PricingSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-center text-muted-foreground mt-8 max-w-2xl mx-auto"
+          className="text-center text-muted-foreground mt-10 max-w-3xl mx-auto bg-card border border-border rounded-xl p-6"
         >
-          💡 <strong>Dica:</strong> Pacotes maiores oferecem melhor
-          custo-benefício. Um tour completo aumenta significativamente o
-          interesse dos compradores e acelera a venda do imóvel.
+          Todos os planos incluem captação, edição das imagens, criação do tour
+          virtual e entrega de link compatível com portais imobiliários, redes
+          sociais e WhatsApp.
         </motion.p>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, Mail, MessageCircle } from "lucide-react";
+import { Phone, Mail, MessageCircle } from "lucide-react";
 
 const CTASection = () => {
   return (
@@ -15,19 +15,17 @@ const CTASection = () => {
         >
           <div className="bg-gradient-card rounded-3xl p-8 md:p-12 border border-border shadow-lg text-center">
             <span className="inline-block bg-gold/10 text-gold-dark px-4 py-2 rounded-full text-sm font-medium mb-6">
-              Comece Agora
+              Entre em Contato
             </span>
 
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-              Transforme a Forma Como Seus
-              <br />
-              <span className="text-primary">Imóveis São Apresentados</span>
+              Solicite um Orçamento
             </h2>
 
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Destaque-se no mercado, encante seus clientes e feche mais
-              negócios com tours virtuais profissionais. Entre em contato e
-              solicite um orçamento sem compromisso.
+              Entre em contato para saber mais sobre nossos serviços de tour
+              virtual 360° e receber um orçamento personalizado para o seu
+              projeto.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">

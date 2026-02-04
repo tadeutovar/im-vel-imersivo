@@ -1,22 +1,16 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Eye, Clock, TrendingUp } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
-  const stats = [
-    { icon: Eye, value: "3x", label: "Mais visualizações" },
-    { icon: Clock, value: "24h", label: "Visitas online" },
-    { icon: TrendingUp, value: "40%", label: "Mais interesse" },
-  ];
-
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroBg}
-          alt="Interior de imóvel de luxo"
+          alt="Interior de imóvel"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-hero opacity-85" />
@@ -31,7 +25,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block bg-gold/20 text-gold-light px-4 py-2 rounded-full text-sm font-medium mb-6">
-              Tecnologia 360° para o Mercado Imobiliário
+              Tour Virtual 360° para Imóveis
             </span>
           </motion.div>
 
@@ -41,9 +35,8 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground mb-6 leading-tight"
           >
-            Valorize Seu Imóvel e{" "}
-            <span className="text-gold">Acelere Negociações</span> com Tours
-            Virtuais 360°
+            Apresente Seu Imóvel de Forma{" "}
+            <span className="text-gold">Profissional e Imersiva</span>
           </motion.h1>
 
           <motion.p
@@ -52,15 +45,15 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto"
           >
-            Atraia compradores qualificados, reduza visitas desnecessárias e
-            destaque-se no mercado com apresentações profissionais que vendem.
+            Ofereça uma experiência de visita virtual completa, permitindo que
+            interessados explorem o imóvel de qualquer lugar, a qualquer hora.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button variant="hero" size="xl" asChild>
               <a href="#contato">
@@ -74,26 +67,6 @@ const HeroSection = () => {
                 Ver Exemplos
               </a>
             </Button>
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="grid grid-cols-3 gap-6 max-w-lg mx-auto"
-          >
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <stat.icon className="w-6 h-6 text-gold mx-auto mb-2" />
-                <div className="text-2xl md:text-3xl font-bold text-primary-foreground">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-primary-foreground/70">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
           </motion.div>
         </div>
       </div>

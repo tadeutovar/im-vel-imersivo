@@ -11,42 +11,32 @@ const FAQSection = () => {
     {
       question: "O que é um tour virtual 360°?",
       answer:
-        "Um tour virtual 360° é uma experiência interativa que permite que visitantes explorem um imóvel de forma imersiva, navegando pelos ambientes como se estivessem fisicamente presentes. Utilizamos fotografias esféricas de alta resolução que podem ser visualizadas em qualquer dispositivo.",
+        "É uma experiência interativa que permite ao visitante navegar pelos ambientes do imóvel de forma virtual, como se estivesse caminhando pelo local.",
     },
     {
-      question: "Em quais plataformas posso usar o tour?",
+      question: "Em quais dispositivos o tour funciona?",
       answer:
-        "O tour virtual pode ser utilizado em praticamente qualquer plataforma: portais imobiliários como ZAP, OLX e VivaReal, seu próprio site, WhatsApp, redes sociais (Instagram, Facebook, LinkedIn) e e-mail marketing. Fornecemos um link único que funciona em todos esses canais.",
+        "O tour funciona em celulares, tablets e computadores, sem necessidade de instalar aplicativos.",
     },
     {
-      question: "O tour funciona em celular e computador?",
+      question: "Onde posso divulgar meu tour virtual?",
       answer:
-        "Sim! Nossos tours virtuais são totalmente responsivos e funcionam perfeitamente em smartphones, tablets e computadores, sem necessidade de instalação de aplicativos. A experiência é otimizada para cada tipo de dispositivo.",
+        "O link pode ser utilizado em portais imobiliários, sites, redes sociais e WhatsApp.",
     },
     {
-      question: "Quanto tempo leva para o tour ficar pronto?",
+      question: "Quanto tempo leva para receber o tour pronto?",
       answer:
-        "O prazo de entrega varia conforme o pacote: tours básicos são entregues em até 3 dias úteis, pacotes profissionais em até 5 dias úteis, e pacotes premium em até 7 dias úteis. Para projetos urgentes, consulte nossa disponibilidade para entrega expressa.",
+        "O prazo médio de entrega é informado no momento do agendamento.",
     },
     {
-      question: "Preciso estar presente no dia da captação?",
+      question: "Preciso estar presente durante a captação?",
       answer:
-        "Não é obrigatório, mas recomendamos. Sua presença pode ajudar a garantir que todos os ambientes importantes sejam fotografados e que o imóvel esteja preparado da melhor forma. Se preferir, podemos combinar a entrega das chaves com portaria ou imobiliária.",
+        "Não é obrigatório, desde que o acesso ao imóvel esteja liberado.",
     },
     {
-      question: "Para quais tipos de imóveis o serviço é indicado?",
+      question: "Quais tipos de imóveis podem receber tour virtual?",
       answer:
-        "Nosso serviço atende todos os tipos de imóveis: apartamentos, casas, coberturas, lofts, salas comerciais, galpões, terrenos com construções, empreendimentos na planta com decorados, e até espaços para eventos. Quanto maior e mais complexo o imóvel, maior o benefício do tour virtual.",
-    },
-    {
-      question: "O tour tem prazo de validade?",
-      answer:
-        "Não! Uma vez criado, o tour virtual fica disponível indefinidamente. Você pode usar o mesmo link quantas vezes quiser, em quantas plataformas desejar, sem custos adicionais ou prazo de expiração.",
-    },
-    {
-      question: "Posso atualizar o tour após mudanças no imóvel?",
-      answer:
-        "Sim, oferecemos serviço de atualização. Se você fizer reformas ou alterações significativas no imóvel, podemos realizar uma nova captação para manter o tour atualizado. Entre em contato para verificar condições especiais para atualizações.",
+        "Residenciais, comerciais, apartamentos, casas, salas, lojas e imóveis em geral.",
     },
   ];
 

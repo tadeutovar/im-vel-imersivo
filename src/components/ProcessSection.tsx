@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
-import { CalendarCheck, Camera, Layers, Share2 } from "lucide-react";
+import {
+  CalendarCheck,
+  Camera,
+  Palette,
+  Layers,
+  Share2,
+} from "lucide-react";
 
 const ProcessSection = () => {
   const steps = [
@@ -8,28 +14,33 @@ const ProcessSection = () => {
       step: "01",
       title: "Agendamento",
       description:
-        "Entre em contato e agende a visita ao imóvel no melhor horário para você.",
+        "Agendamento da visita no imóvel em data e horário combinados.",
     },
     {
       icon: Camera,
       step: "02",
-      title: "Captação Profissional",
+      title: "Captação",
       description:
-        "Nossa equipe realiza a captação das fotos 360° com equipamento de alta qualidade.",
+        "Captação das imagens 360° utilizando equipamento próprio.",
+    },
+    {
+      icon: Palette,
+      step: "03",
+      title: "Edição",
+      description:
+        "Edição profissional das imagens para correção de cor, luz e alinhamento.",
     },
     {
       icon: Layers,
-      step: "03",
+      step: "04",
       title: "Criação do Tour",
-      description:
-        "Desenvolvemos o tour virtual interativo com navegação fluida e recursos avançados.",
+      description: "Criação do tour virtual interativo.",
     },
     {
       icon: Share2,
-      step: "04",
-      title: "Entrega e Uso",
-      description:
-        "Receba o link do tour pronto para usar em portais, WhatsApp, redes sociais e sites.",
+      step: "05",
+      title: "Entrega",
+      description: "Entrega do link pronto para divulgação.",
     },
   ];
 
@@ -44,29 +55,28 @@ const ProcessSection = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block bg-gold/10 text-gold-dark px-4 py-2 rounded-full text-sm font-medium mb-4">
-            Processo Simples
+            Processo
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Como Funciona
+            Como Funciona o Processo
           </h2>
           <p className="text-lg text-muted-foreground">
-            Um processo simplificado para que você tenha seu tour virtual pronto
-            em poucos dias.
+            Conheça as etapas para obter seu tour virtual 360°.
           </p>
         </motion.div>
 
         <div className="relative">
           {/* Connection Line */}
-          <div className="hidden lg:block absolute top-24 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-gold/20 via-gold to-gold/20" />
+          <div className="hidden lg:block absolute top-24 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-gold/20 via-gold to-gold/20" />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
             {steps.map((step, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="relative text-center"
               >
                 {/* Step Circle */}
@@ -82,13 +92,24 @@ const ProcessSection = () => {
                 <h3 className="text-xl font-display font-semibold text-foreground mb-3">
                   {step.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-sm">
                   {step.description}
                 </p>
               </motion.div>
             ))}
           </div>
         </div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="text-center text-muted-foreground mt-12 max-w-2xl mx-auto"
+        >
+          Todo o processo é pensado para ser simples, rápido e eficiente para o
+          cliente.
+        </motion.p>
       </div>
     </section>
   );

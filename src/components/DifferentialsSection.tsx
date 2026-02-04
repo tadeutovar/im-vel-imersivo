@@ -1,31 +1,25 @@
 import { motion } from "framer-motion";
-import { Shield, Cpu, Users, Award } from "lucide-react";
+import { Eye, Settings, Target } from "lucide-react";
 
 const DifferentialsSection = () => {
-  const differentials = [
+  const commitments = [
     {
-      icon: Cpu,
-      title: "Tecnologia de Ponta",
+      icon: Eye,
+      title: "Qualidade Visual",
       description:
-        "Utilizamos câmeras e equipamentos profissionais de última geração para garantir imagens com altíssima resolução e nitidez.",
+        "Trabalhamos com foco em qualidade visual, padronização e entrega de materiais que valorizem o imóvel.",
     },
     {
-      icon: Users,
-      title: "Equipe Especializada",
+      icon: Settings,
+      title: "Tecnologia e Organização",
       description:
-        "Profissionais com anos de experiência no mercado imobiliário, entendendo as necessidades específicas de corretores e imobiliárias.",
+        "Utilizamos tecnologia de captura 360° e fluxo de trabalho organizado para garantir consistência em cada projeto.",
     },
     {
-      icon: Award,
-      title: "Resultados Comprovados",
+      icon: Target,
+      title: "Apresentação Profissional",
       description:
-        "Nossos clientes relatam aumento significativo nas visualizações e maior taxa de conversão em visitas presenciais qualificadas.",
-    },
-    {
-      icon: Shield,
-      title: "Garantia de Qualidade",
-      description:
-        "Se não estiver satisfeito com o resultado, refazemos a captação sem custo adicional. Seu sucesso é nossa prioridade.",
+        "Nosso objetivo é oferecer uma apresentação profissional que eleve a percepção de valor do imóvel.",
     },
   ];
 
@@ -50,19 +44,18 @@ const DifferentialsSection = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block bg-gold/20 text-gold-light px-4 py-2 rounded-full text-sm font-medium mb-4">
-            Nossos Diferenciais
+            Diferenciais
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mb-4">
-            Por Que Nos Escolher?
+            Nosso Compromisso
           </h2>
           <p className="text-lg text-primary-foreground/80">
-            Combinamos tecnologia, experiência e comprometimento para entregar
-            resultados que fazem diferença nos seus negócios.
+            Qualidade, organização e profissionalismo em cada projeto.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {differentials.map((item, index) => (
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          {commitments.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -83,31 +76,6 @@ const DifferentialsSection = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-primary-foreground/20"
-        >
-          {[
-            { value: "500+", label: "Tours Entregues" },
-            { value: "98%", label: "Clientes Satisfeitos" },
-            { value: "150+", label: "Corretores Atendidos" },
-            { value: "3 Anos", label: "De Experiência" },
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-display font-bold text-gold mb-1">
-                {stat.value}
-              </div>
-              <div className="text-primary-foreground/70 text-sm">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

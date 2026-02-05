@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "../assets/visitare-logo1.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,11 +25,16 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-gold rounded-lg flex items-center justify-center">
-              <span className="text-accent-foreground font-bold text-lg">360</span>
-            </div>
-            <span className="font-display font-bold text-xl text-foreground hidden sm:block">
-              Tour Virtual Pro
+            <img
+              src={logo}
+              alt="Logo Visitare Studio"
+              className="w-12 h-12 rounded-lg object-contain"
+            />
+            <span
+              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="font-bold text-2xl text-foreground hidden sm:block"
+            >
+              Visitare Studio
             </span>
           </a>
 
@@ -47,7 +53,7 @@ const Header = () => {
 
           <div className="flex items-center gap-4">
             <Button variant="gold" size="lg" className="hidden sm:flex" asChild>
-              <a href="#contato">Solicitar Orçamento</a>
+              <a href="#contato">Falar no WhatsApp</a>
             </Button>
 
             <button
@@ -78,7 +84,7 @@ const Header = () => {
                 </a>
               ))}
               <Button variant="gold" size="lg" className="mt-2" asChild>
-                <a href="#contato">Solicitar Orçamento</a>
+                <a href="#contato">Falar no WhatsApp</a>
               </Button>
             </div>
           </motion.nav>

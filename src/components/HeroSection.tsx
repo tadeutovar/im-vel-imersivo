@@ -57,7 +57,7 @@ const HeroSection = () => {
           >
             <Button variant="hero" size="xl" asChild>
               <a href="#contato">
-                Solicitar Orçamento
+                Falar no WhatsApp
                 <ArrowRight className="w-5 h-5" />
               </a>
             </Button>

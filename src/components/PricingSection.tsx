@@ -22,6 +22,7 @@ const PricingSection = () => {
       name: "Pacote com 5 Tours Virtuais",
       price: "270",
       priceLabel: "por tour",
+      totalPrice: "1.350",
       description:
         "Conjunto de cinco tours virtuais completos, com todas as etapas incluídas e valor reduzido por unidade.",
       features: [
@@ -183,7 +184,7 @@ const PricingSection = () => {
                 className="w-full"
                 asChild
               >
-                <a href="#contato">Solicitar Orçamento</a>
+                <a href="#contato">Quero Contratar</a>
               </Button>
             </motion.div>
           ))}

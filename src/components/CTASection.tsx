@@ -19,7 +19,7 @@ const CTASection = () => {
             </span>
 
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-              Solicite um Orçamento
+              Agendar meu Tour Virtual
             </h2>
 
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -31,7 +31,7 @@ const CTASection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
               <Button variant="hero" size="xl" asChild>
                 <a
-                  href="https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um orçamento para tour virtual 360°"
+                  href="https://wa.me/5521988840669?text=Ol%C3%A1!%20Vi%20os%20planos%20no%20site%20e%20gostaria%20de%20confirmar%20o%20melhor%20para%20meu%20im%C3%B3vel%20e%20verificar%20disponibilidade."
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -40,7 +40,7 @@ const CTASection = () => {
                 </a>
               </Button>
               <Button variant="navy" size="xl" asChild>
-                <a href="mailto:contato@tourvirtualpro.com.br">
+                <a href="mailto:contato@visitarestudio.com.br">
                   <Mail className="w-5 h-5" />
                   Enviar E-mail
                 </a>
@@ -49,19 +49,19 @@ const CTASection = () => {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-muted-foreground">
               <a
-                href="tel:+5511999999999"
+                href="tel:+5521988840669"
                 className="flex items-center gap-2 hover:text-foreground transition-colors"
               >
                 <Phone className="w-5 h-5 text-gold" />
-                (11) 99999-9999
+                (21) 98884-0669
               </a>
               <span className="hidden sm:block">•</span>
               <a
-                href="mailto:contato@tourvirtualpro.com.br"
+                href="mailto:contato@visitarestudio.com.br"
                 className="flex items-center gap-2 hover:text-foreground transition-colors"
               >
                 <Mail className="w-5 h-5 text-gold" />
-                contato@tourvirtualpro.com.br
+                contato@visitarestudio.com.br
               </a>
             </div>
           </div>

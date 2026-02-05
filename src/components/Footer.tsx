@@ -14,7 +14,7 @@ const Footer = () => {
                 <span className="text-accent-foreground font-bold text-lg">360</span>
               </div>
               <span className="font-display font-bold text-xl text-primary-foreground">
-                Tour Virtual Pro
+                Visitare Studio
               </span>
             </div>
             <p className="text-primary-foreground/70 max-w-sm mb-4">
@@ -76,18 +76,18 @@ const Footer = () => {
             <ul className="space-y-2 text-primary-foreground/70">
               <li>
                 <a
-                  href="tel:+5511999999999"
+                  href="tel:+5521988840669"
                   className="hover:text-gold transition-colors"
                 >
-                  (11) 99999-9999
+                  (21) 98884-0669
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:contato@tourvirtualpro.com.br"
+                  href="mailto:contato@visitarestudio.com.br"
                   className="hover:text-gold transition-colors"
                 >
-                  contato@tourvirtualpro.com.br
+                  contato@visitarestudio.com.br
                 </a>
               </li>
               <li>São Paulo, SP</li>
@@ -97,7 +97,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/50 text-sm">
-            © {currentYear} Tour Virtual Pro. Todos os direitos reservados.
+            © {currentYear} Visitare Studio. Todos os direitos reservados.
           </p>
           <div className="flex gap-6 text-sm">
             <a

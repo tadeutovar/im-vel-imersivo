@@ -1,52 +1,35 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Check, Star } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const PricingSection = () => {
+  const { t } = useLanguage();
+
   const plans = [
     {
-      name: "Tour Virtual Completo",
+      nameKey: "pricing.plan1.name",
       price: "300",
-      priceLabel: "por tour",
-      description:
-        "Captação das imagens 360°, edição profissional, criação do tour virtual interativo e entrega do link pronto para uso.",
-      features: [
-        "Captação das imagens 360°",
-        "Edição profissional",
-        "Tour virtual interativo",
-        "Link pronto para uso",
-      ],
+      descKey: "pricing.plan1.desc",
+      featureKeys: ["pricing.plan1.f1", "pricing.plan1.f2", "pricing.plan1.f3", "pricing.plan1.f4"],
       popular: false,
+      totalPrice: undefined as string | undefined,
     },
     {
-      name: "Pacote com 5 Tours Virtuais",
+      nameKey: "pricing.plan2.name",
       price: "270",
-      priceLabel: "por tour",
-      totalPrice: "1.350",
-      description:
-        "Conjunto de cinco tours virtuais completos, com todas as etapas incluídas e valor reduzido por unidade.",
-      features: [
-        "5 tours virtuais completos",
-        "Captação e edição incluídas",
-        "Links individuais por imóvel",
-        "Valor reduzido por unidade",
-      ],
+      descKey: "pricing.plan2.desc",
+      featureKeys: ["pricing.plan2.f1", "pricing.plan2.f2", "pricing.plan2.f3", "pricing.plan2.f4"],
       popular: true,
+      totalPrice: "1.350",
     },
     {
-      name: "Pacote com 10 Tours Virtuais",
+      nameKey: "pricing.plan3.name",
       price: "250",
-      priceLabel: "por tour",
-      totalPrice: "2.500",
-      description:
-        "Pacote econômico para quem deseja padronizar vários imóveis com apresentação profissional.",
-      features: [
-        "10 tours virtuais completos",
-        "Captação e edição incluídas",
-        "Links individuais por imóvel",
-        "Melhor custo-benefício",
-      ],
+      descKey: "pricing.plan3.desc",
+      featureKeys: ["pricing.plan3.f1", "pricing.plan3.f2", "pricing.plan3.f3", "pricing.plan3.f4"],
       popular: false,
+      totalPrice: "2.500",
     },
   ];
 
@@ -61,15 +44,13 @@ const PricingSection = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block bg-gold/10 text-gold-dark px-4 py-2 rounded-full text-sm font-medium mb-4">
-            Investimento
+            {t("pricing.badge")}
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Planos e Investimento
+            {t("pricing.title")}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Oferecemos planos simples e transparentes, com valores definidos por
-            tour virtual completo, garantindo previsibilidade e excelente
-            custo-benefício.
+            {t("pricing.subtitle")}
           </p>
         </motion.div>
 
@@ -91,7 +72,7 @@ const PricingSection = () => {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="inline-flex items-center gap-1 bg-gradient-gold px-4 py-1 rounded-full text-sm font-bold text-accent-foreground">
                     <Star className="w-4 h-4" />
-                    Recomendado
+                    {t("pricing.recommended")}
                   </span>
                 </div>
               )}
@@ -102,7 +83,7 @@ const PricingSection = () => {
                     plan.popular ? "text-primary-foreground" : "text-foreground"
                   }`}
                 >
-                  {plan.name}
+                  {t(plan.nameKey)}
                 </h3>
               </div>
 
@@ -132,7 +113,7 @@ const PricingSection = () => {
                       : "text-muted-foreground"
                   }`}
                 >
-                  {plan.priceLabel}
+                  {t("pricing.perTour")}
                 </p>
                 {plan.totalPrice && (
                   <p
@@ -142,7 +123,7 @@ const PricingSection = () => {
                         : "text-muted-foreground/70"
                     }`}
                   >
-                    Total: R$ {plan.totalPrice}
+                    {t("pricing.total")}: R$ {plan.totalPrice}
                   </p>
                 )}
               </div>
@@ -154,11 +135,11 @@ const PricingSection = () => {
                     : "text-muted-foreground"
                 }`}
               >
-                {plan.description}
+                {t(plan.descKey)}
               </p>
 
               <ul className="space-y-3 mb-8">
-                {plan.features.map((feature, idx) => (
+                {plan.featureKeys.map((featureKey, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <Check
                       className={`w-5 h-5 shrink-0 mt-0.5 ${
@@ -172,7 +153,7 @@ const PricingSection = () => {
                           : "text-muted-foreground"
                       }`}
                     >
-                      {feature}
+                      {t(featureKey)}
                     </span>
                   </li>
                 ))}
@@ -184,7 +165,7 @@ const PricingSection = () => {
                 className="w-full"
                 asChild
               >
-                <a href="#contato">Quero Contratar</a>
+                <a href="#contato">{t("pricing.cta")}</a>
               </Button>
             </motion.div>
           ))}
@@ -197,9 +178,7 @@ const PricingSection = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-center text-muted-foreground mt-10 max-w-3xl mx-auto bg-card border border-border rounded-xl p-6"
         >
-          Todos os planos incluem captação, edição das imagens, criação do tour
-          virtual e entrega de link compatível com portais imobiliários, redes
-          sociais e WhatsApp.
+          {t("pricing.footer")}
         </motion.p>
       </div>
     </section>

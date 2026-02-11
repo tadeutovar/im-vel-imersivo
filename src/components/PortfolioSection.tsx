@@ -4,26 +4,29 @@ import { ExternalLink } from "lucide-react";
 import portfolio1 from "@/assets/portfolio-1.jpg";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const PortfolioSection = () => {
+  const { t } = useLanguage();
+
   const projects = [
     {
       image: portfolio1,
-      title: "Apartamento de Alto Padrão",
+      titleKey: "portfolio.project1.title",
       location: "Jardins, São Paulo",
-      type: "Residencial",
+      typeKey: "portfolio.type.residential",
     },
     {
       image: portfolio2,
-      title: "Cozinha Gourmet",
+      titleKey: "portfolio.project2.title",
       location: "Alphaville, SP",
-      type: "Residencial",
+      typeKey: "portfolio.type.residential",
     },
     {
       image: portfolio3,
-      title: "Banheiro Master",
+      titleKey: "portfolio.project3.title",
       location: "Moema, São Paulo",
-      type: "Residencial",
+      typeKey: "portfolio.type.residential",
     },
   ];
 
@@ -38,14 +41,13 @@ const PortfolioSection = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-            Nosso Trabalho
+            {t("portfolio.badge")}
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Portfólio de Tours Virtuais
+            {t("portfolio.title")}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Confira alguns dos nossos trabalhos e a qualidade que entregamos em
-            cada projeto.
+            {t("portfolio.subtitle")}
           </p>
         </motion.div>
 
@@ -62,7 +64,7 @@ const PortfolioSection = () => {
               <div className="aspect-square overflow-hidden">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={t(project.titleKey)}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
@@ -70,10 +72,10 @@ const PortfolioSection = () => {
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                 <span className="text-gold text-sm font-medium mb-1">
-                  {project.type}
+                  {t(project.typeKey)}
                 </span>
                 <h3 className="text-xl font-display font-semibold text-primary-foreground mb-1">
-                  {project.title}
+                  {t(project.titleKey)}
                 </h3>
                 <p className="text-primary-foreground/70 text-sm mb-4">
                   {project.location}
@@ -84,14 +86,14 @@ const PortfolioSection = () => {
                   className="w-fit"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  Ver Tour 360°
+                  {t("portfolio.viewTour")}
                 </Button>
               </div>
 
               {/* Bottom Info Bar */}
               <div className="absolute bottom-0 left-0 right-0 bg-card p-4 group-hover:translate-y-full transition-transform duration-300">
                 <h3 className="font-display font-semibold text-foreground">
-                  {project.title}
+                  {t(project.titleKey)}
                 </h3>
                 <p className="text-muted-foreground text-sm">
                   {project.location}
@@ -110,7 +112,7 @@ const PortfolioSection = () => {
         >
           <Button variant="navy" size="lg" asChild>
             <a href="#contato">
-              Solicitar Tour Para Seu Imóvel
+              {t("portfolio.cta")}
             </a>
           </Button>
         </motion.div>

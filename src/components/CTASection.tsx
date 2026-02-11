@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MessageCircle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const CTASection = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="contato" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
@@ -15,17 +18,15 @@ const CTASection = () => {
         >
           <div className="bg-gradient-card rounded-3xl p-8 md:p-12 border border-border shadow-lg text-center">
             <span className="inline-block bg-gold/10 text-gold-dark px-4 py-2 rounded-full text-sm font-medium mb-6">
-              Entre em Contato
+              {t("cta.badge")}
             </span>
 
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-              Agendar meu Tour Virtual
+              {t("cta.title")}
             </h2>
 
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Entre em contato para saber mais sobre nossos serviços de tour
-              virtual 360° e receber um orçamento personalizado para o seu
-              projeto.
+              {t("cta.subtitle")}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
@@ -36,13 +37,13 @@ const CTASection = () => {
                   rel="noopener noreferrer"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  WhatsApp
+                  {t("cta.whatsapp")}
                 </a>
               </Button>
               <Button variant="navy" size="xl" asChild>
                 <a href="mailto:contato@visitarestudio.com.br">
                   <Mail className="w-5 h-5" />
-                  Enviar E-mail
+                  {t("cta.email")}
                 </a>
               </Button>
             </div>

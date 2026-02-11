@@ -1,7 +1,17 @@
 import { Instagram, Linkedin, Facebook } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
+
+  const navLinks = [
+    { label: t("nav.benefits"), href: "#beneficios" },
+    { label: t("nav.howItWorks"), href: "#como-funciona" },
+    { label: t("nav.portfolio"), href: "#portfolio" },
+    { label: t("nav.pricing"), href: "#precos" },
+    { label: t("nav.faq"), href: "#faq" },
+  ];
 
   return (
     <footer className="bg-navy-dark py-12">
@@ -14,12 +24,11 @@ const Footer = () => {
                 <span className="text-accent-foreground font-bold text-lg">360</span>
               </div>
               <span className="font-display font-bold text-xl text-primary-foreground">
-                Visitare Studio
+                {t("footer.brand")}
               </span>
             </div>
             <p className="text-primary-foreground/70 max-w-sm mb-4">
-              Especialistas em tours virtuais e fotografias 360° para o mercado
-              imobiliário. Transforme a apresentação dos seus imóveis.
+              {t("footer.desc")}
             </p>
             <div className="flex gap-3">
               <a
@@ -46,16 +55,10 @@ const Footer = () => {
           {/* Links */}
           <div>
             <h4 className="font-display font-semibold text-primary-foreground mb-4">
-              Navegação
+              {t("footer.nav")}
             </h4>
             <ul className="space-y-2">
-              {[
-                { label: "Benefícios", href: "#beneficios" },
-                { label: "Como Funciona", href: "#como-funciona" },
-                { label: "Portfólio", href: "#portfolio" },
-                { label: "Preços", href: "#precos" },
-                { label: "FAQ", href: "#faq" },
-              ].map((link) => (
+              {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
@@ -71,7 +74,7 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h4 className="font-display font-semibold text-primary-foreground mb-4">
-              Contato
+              {t("footer.contact")}
             </h4>
             <ul className="space-y-2 text-primary-foreground/70">
               <li>
@@ -97,20 +100,20 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/50 text-sm">
-            © {currentYear} Visitare Studio. Todos os direitos reservados.
+            © {currentYear} Visitare Studio. {t("footer.rights")}
           </p>
           <div className="flex gap-6 text-sm">
             <a
               href="#"
               className="text-primary-foreground/50 hover:text-gold transition-colors"
             >
-              Política de Privacidade
+              {t("footer.privacy")}
             </a>
             <a
               href="#"
               className="text-primary-foreground/50 hover:text-gold transition-colors"
             >
-              Termos de Uso
+              {t("footer.terms")}
             </a>
           </div>
         </div>

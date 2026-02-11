@@ -2,8 +2,11 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Background Image with Overlay */}
@@ -25,7 +28,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block bg-gold/20 text-gold-light px-4 py-2 rounded-full text-sm font-medium mb-6">
-              Tour Virtual 360° para Imóveis
+              {t("hero.badge")}
             </span>
           </motion.div>
 
@@ -35,8 +38,8 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground mb-6 leading-tight"
           >
-            Apresente Seu Imóvel de Forma{" "}
-            <span className="text-gold">Profissional e Imersiva</span>
+            {t("hero.title.part1")}
+            <span className="text-gold">{t("hero.title.highlight")}</span>
           </motion.h1>
 
           <motion.p
@@ -45,8 +48,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto"
           >
-            Ofereça uma experiência de visita virtual completa, permitindo que
-            interessados explorem o imóvel de qualquer lugar, a qualquer hora.
+            {t("hero.subtitle")}
           </motion.p>
 
           <motion.div
@@ -57,14 +59,14 @@ const HeroSection = () => {
           >
             <Button variant="hero" size="xl" asChild>
               <a href="#contato">
-                Falar no WhatsApp
+                {t("hero.cta.primary")}
                 <ArrowRight className="w-5 h-5" />
               </a>
             </Button>
             <Button variant="hero-outline" size="xl" asChild>
               <a href="#portfolio">
                 <Play className="w-5 h-5" />
-                Ver Exemplos
+                {t("hero.cta.secondary")}
               </a>
             </Button>
           </motion.div>

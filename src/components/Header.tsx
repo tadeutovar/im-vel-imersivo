@@ -3,16 +3,19 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/visitare-logo1.png";
+import LanguageSelector from "@/components/LanguageSelector";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const navLinks = [
-    { href: "#beneficios", label: "Benefícios" },
-    { href: "#como-funciona", label: "Como Funciona" },
-    { href: "#portfolio", label: "Portfólio" },
-    { href: "#precos", label: "Preços" },
-    { href: "#faq", label: "FAQ" },
+    { href: "#beneficios", label: t("nav.benefits") },
+    { href: "#como-funciona", label: t("nav.howItWorks") },
+    { href: "#portfolio", label: t("nav.portfolio") },
+    { href: "#precos", label: t("nav.pricing") },
+    { href: "#faq", label: t("nav.faq") },
   ];
 
   return (
@@ -52,8 +55,9 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center gap-4">
+            <LanguageSelector />
             <Button variant="gold" size="lg" className="hidden sm:flex" asChild>
-              <a href="#contato">Falar no WhatsApp</a>
+              <a href="#contato">{t("nav.cta")}</a>
             </Button>
 
             <button
@@ -84,7 +88,7 @@ const Header = () => {
                 </a>
               ))}
               <Button variant="gold" size="lg" className="mt-2" asChild>
-                <a href="#contato">Falar no WhatsApp</a>
+                <a href="#contato">{t("nav.cta")}</a>
               </Button>
             </div>
           </motion.nav>

@@ -7,45 +7,18 @@ import {
   Globe,
   Smartphone,
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const BenefitsSection = () => {
+  const { t } = useLanguage();
+
   const benefits = [
-    {
-      icon: Eye,
-      title: "Melhor Apresentação do Imóvel",
-      description:
-        "O tour virtual permite apresentar todos os ambientes de forma organizada e profissional, valorizando cada detalhe.",
-    },
-    {
-      icon: Clock,
-      title: "Economia de Tempo",
-      description:
-        "Interessados podem conhecer o imóvel virtualmente antes de agendar uma visita presencial, otimizando o tempo de todos.",
-    },
-    {
-      icon: Award,
-      title: "Mais Profissionalismo",
-      description:
-        "Diferencie seus anúncios com uma apresentação moderna que transmite cuidado e atenção aos detalhes.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Melhor Percepção de Valor",
-      description:
-        "A experiência imersiva ajuda o interessado a visualizar o espaço de forma completa, elevando a percepção de valor.",
-    },
-    {
-      icon: Globe,
-      title: "Disponibilidade Permanente",
-      description:
-        "O tour virtual fica disponível para acesso a qualquer hora, de qualquer lugar.",
-    },
-    {
-      icon: Smartphone,
-      title: "Compatibilidade Total",
-      description:
-        "Funciona em celulares, tablets e computadores, sem necessidade de instalação de aplicativos.",
-    },
+    { icon: Eye, titleKey: "benefits.1.title", descKey: "benefits.1.desc" },
+    { icon: Clock, titleKey: "benefits.2.title", descKey: "benefits.2.desc" },
+    { icon: Award, titleKey: "benefits.3.title", descKey: "benefits.3.desc" },
+    { icon: TrendingUp, titleKey: "benefits.4.title", descKey: "benefits.4.desc" },
+    { icon: Globe, titleKey: "benefits.5.title", descKey: "benefits.5.desc" },
+    { icon: Smartphone, titleKey: "benefits.6.title", descKey: "benefits.6.desc" },
   ];
 
   return (
@@ -59,13 +32,13 @@ const BenefitsSection = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-            Benefícios
+            {t("benefits.badge")}
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Por Que Usar um Tour Virtual 360°?
+            {t("benefits.title")}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Conheça as vantagens de apresentar seus imóveis com tecnologia 360°.
+            {t("benefits.subtitle")}
           </p>
         </motion.div>
 
@@ -83,10 +56,10 @@ const BenefitsSection = () => {
                 <benefit.icon className="w-7 h-7 text-accent-foreground" />
               </div>
               <h3 className="text-xl font-display font-semibold text-foreground mb-3">
-                {benefit.title}
+                {t(benefit.titleKey)}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                {benefit.description}
+                {t(benefit.descKey)}
               </p>
             </motion.div>
           ))}

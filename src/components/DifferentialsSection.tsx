@@ -1,26 +1,14 @@
 import { motion } from "framer-motion";
 import { Eye, Settings, Target } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const DifferentialsSection = () => {
+  const { t } = useLanguage();
+
   const commitments = [
-    {
-      icon: Eye,
-      title: "Qualidade Visual",
-      description:
-        "Trabalhamos com foco em qualidade visual, padronização e entrega de materiais que valorizem o imóvel.",
-    },
-    {
-      icon: Settings,
-      title: "Tecnologia e Organização",
-      description:
-        "Utilizamos tecnologia de captura 360° e fluxo de trabalho organizado para garantir consistência em cada projeto.",
-    },
-    {
-      icon: Target,
-      title: "Apresentação Profissional",
-      description:
-        "Nosso objetivo é oferecer uma apresentação profissional que eleve a percepção de valor do imóvel.",
-    },
+    { icon: Eye, titleKey: "diff.1.title", descKey: "diff.1.desc" },
+    { icon: Settings, titleKey: "diff.2.title", descKey: "diff.2.desc" },
+    { icon: Target, titleKey: "diff.3.title", descKey: "diff.3.desc" },
   ];
 
   return (
@@ -44,13 +32,13 @@ const DifferentialsSection = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block bg-gold/20 text-gold-light px-4 py-2 rounded-full text-sm font-medium mb-4">
-            Diferenciais
+            {t("diff.badge")}
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mb-4">
-            Nosso Compromisso
+            {t("diff.title")}
           </h2>
           <p className="text-lg text-primary-foreground/80">
-            Qualidade, organização e profissionalismo em cada projeto.
+            {t("diff.subtitle")}
           </p>
         </motion.div>
 
@@ -68,10 +56,10 @@ const DifferentialsSection = () => {
                 <item.icon className="w-8 h-8 text-gold" />
               </div>
               <h3 className="text-xl font-display font-semibold text-primary-foreground mb-3">
-                {item.title}
+                {t(item.titleKey)}
               </h3>
               <p className="text-primary-foreground/70 leading-relaxed">
-                {item.description}
+                {t(item.descKey)}
               </p>
             </motion.div>
           ))}

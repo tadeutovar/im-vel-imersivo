@@ -2,62 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 215 25% 15%;
+    --foreground: 0 0% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card: 40 20% 97%;
+    --card-foreground: 0 0% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 0 0% 12%;
 
-    --primary: 215 70% 25%;
+    --primary: 0 0% 12%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 30% 96%;
-    --secondary-foreground: 215 25% 15%;
+    --secondary: 40 14% 96%;
+    --secondary-foreground: 0 0% 12%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 215 15% 45%;
+    --muted: 40 10% 92%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 38 90% 50%;
-    --accent-foreground: 215 25% 10%;
+    --accent: 38 50% 56%;
+    --accent-foreground: 0 0% 12%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 25% 90%;
-    --input: 210 25% 90%;
-    --ring: 215 70% 25%;
+    --border: 30 10% 85%;
+    --input: 30 10% 85%;
+    --ring: 38 50% 56%;
 
-    --radius: 0.75rem;
+    --radius: 0.25rem;
 
     /* Custom tokens */
-    --gold: 38 90% 50%;
-    --gold-light: 40 85% 60%;
-    --gold-dark: 35 95% 40%;
-    --navy: 215 70% 25%;
-    --navy-light: 215 60% 35%;
-    --navy-dark: 215 80% 15%;
-    --slate: 215 20% 65%;
-    --section-alt: 210 30% 97%;
-    
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(215 80% 15%) 0%, hsl(215 70% 25%) 50%, hsl(215 60% 35%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(38 90% 50%) 0%, hsl(40 85% 60%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 30% 98%) 100%);
-    
+    --gold: 38 50% 56%;
+    --gold-light: 38 45% 65%;
+    --gold-dark: 38 55% 45%;
+    --charcoal: 0 0% 12%;
+    --charcoal-light: 0 0% 25%;
+    --warm-white: 40 20% 97%;
+    --sand: 30 25% 88%;
+    --section-alt: 40 14% 96%;
+
     /* Shadows */
-    --shadow-sm: 0 2px 8px -2px hsl(215 70% 25% / 0.08);
-    --shadow-md: 0 8px 24px -8px hsl(215 70% 25% / 0.12);
-    --shadow-lg: 0 16px 48px -16px hsl(215 70% 25% / 0.16);
-    --shadow-gold: 0 8px 24px -8px hsl(38 90% 50% / 0.25);
+    --shadow-sm: 0 1px 3px 0 hsl(0 0% 0% / 0.04);
+    --shadow-md: 0 4px 12px -2px hsl(0 0% 0% / 0.06);
+    --shadow-lg: 0 8px 24px -4px hsl(0 0% 0% / 0.08);
+    --shadow-gold: 0 4px 16px -4px hsl(38 50% 56% / 0.15);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -70,37 +61,36 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 215 80% 8%;
-    --foreground: 210 30% 95%;
+    --background: 0 0% 8%;
+    --foreground: 40 10% 90%;
 
-    --card: 215 70% 12%;
-    --card-foreground: 210 30% 95%;
+    --card: 0 0% 11%;
+    --card-foreground: 40 10% 90%;
 
-    --popover: 215 70% 12%;
-    --popover-foreground: 210 30% 95%;
+    --popover: 0 0% 11%;
+    --popover-foreground: 40 10% 90%;
 
-    --primary: 38 90% 50%;
-    --primary-foreground: 215 25% 10%;
+    --primary: 38 50% 56%;
+    --primary-foreground: 0 0% 8%;
 
-    --secondary: 215 50% 20%;
-    --secondary-foreground: 210 30% 95%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 40 10% 90%;
 
-    --muted: 215 50% 18%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 55%;
 
-    --accent: 38 90% 50%;
-    --accent-foreground: 215 25% 10%;
+    --accent: 38 50% 56%;
+    --accent-foreground: 0 0% 8%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 215 50% 20%;
-    --input: 215 50% 20%;
-    --ring: 38 90% 50%;
-    
-    --section-alt: 215 70% 10%;
-    --gradient-hero: linear-gradient(135deg, hsl(215 80% 5%) 0%, hsl(215 70% 12%) 50%, hsl(215 60% 18%) 100%);
-    
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 38 50% 56%;
+
+    --section-alt: 0 0% 10%;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -119,5 +109,8 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }

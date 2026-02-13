@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import portfolio1 from "@/assets/portfolio-1.jpg";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
@@ -31,86 +31,70 @@ const PortfolioSection = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 md:py-28 bg-section-alt">
+    <section id="portfolio" className="py-24 md:py-32 bg-section-alt">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-2xl mx-auto mb-20"
         >
-          <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <span className="inline-block text-accent text-xs font-medium tracking-[0.3em] uppercase mb-4">
             {t("portfolio.badge")}
           </span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-foreground mb-5">
             {t("portfolio.title")}
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-muted-foreground leading-relaxed">
             {t("portfolio.subtitle")}
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative rounded-2xl overflow-hidden bg-card shadow-md hover:shadow-lg transition-all duration-300"
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="group cursor-pointer"
             >
-              <div className="aspect-square overflow-hidden">
+              <div className="aspect-[4/5] overflow-hidden mb-4">
                 <img
                   src={project.image}
                   alt={t(project.titleKey)}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                <span className="text-gold text-sm font-medium mb-1">
-                  {t(project.typeKey)}
-                </span>
-                <h3 className="text-xl font-display font-semibold text-primary-foreground mb-1">
-                  {t(project.titleKey)}
-                </h3>
-                <p className="text-primary-foreground/70 text-sm mb-4">
-                  {project.location}
-                </p>
-                <Button
-                  variant="gold"
-                  size="sm"
-                  className="w-fit"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  {t("portfolio.viewTour")}
-                </Button>
-              </div>
-
-              {/* Bottom Info Bar */}
-              <div className="absolute bottom-0 left-0 right-0 bg-card p-4 group-hover:translate-y-full transition-transform duration-300">
-                <h3 className="font-display font-semibold text-foreground">
-                  {t(project.titleKey)}
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  {project.location}
-                </p>
+              <div className="flex items-start justify-between">
+                <div>
+                  <span className="text-accent text-xs tracking-[0.2em] uppercase">
+                    {t(project.typeKey)}
+                  </span>
+                  <h3 className="text-lg font-display font-semibold text-foreground mt-1">
+                    {t(project.titleKey)}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {project.location}
+                  </p>
+                </div>
+                <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent transition-colors mt-1" />
               </div>
             </motion.div>
           ))}
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-center mt-12"
+          transition={{ duration: 0.4, delay: 0.4 }}
+          className="text-center mt-16"
         >
-          <Button variant="navy" size="lg" asChild>
+          <Button variant="premium" size="lg" asChild>
             <a href="#contato">
               {t("portfolio.cta")}
             </a>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Check, Star } from "lucide-react";
+import { Check } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const PricingSection = () => {
@@ -34,125 +34,79 @@ const PricingSection = () => {
   ];
 
   return (
-    <section id="precos" className="py-20 md:py-28 bg-background">
+    <section id="precos" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-2xl mx-auto mb-20"
         >
-          <span className="inline-block bg-gold/10 text-gold-dark px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <span className="inline-block text-accent text-xs font-medium tracking-[0.3em] uppercase mb-4">
             {t("pricing.badge")}
           </span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-foreground mb-5">
             {t("pricing.title")}
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-muted-foreground leading-relaxed">
             {t("pricing.subtitle")}
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-px bg-border max-w-5xl mx-auto">
           {plans.map((plan, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`relative rounded-2xl p-8 ${
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className={`relative p-10 ${
                 plan.popular
-                  ? "bg-gradient-hero border-2 border-gold shadow-gold scale-105"
-                  : "bg-card border border-border shadow-md"
+                  ? "bg-foreground text-background"
+                  : "bg-background"
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="inline-flex items-center gap-1 bg-gradient-gold px-4 py-1 rounded-full text-sm font-bold text-accent-foreground">
-                    <Star className="w-4 h-4" />
-                    {t("pricing.recommended")}
-                  </span>
-                </div>
+                <div className="absolute top-0 left-0 right-0 h-px bg-accent" />
               )}
 
-              <div className="text-center mb-6">
+              <div className="mb-8">
                 <h3
-                  className={`text-xl font-display font-bold mb-2 ${
-                    plan.popular ? "text-primary-foreground" : "text-foreground"
+                  className={`text-base font-medium tracking-wide uppercase mb-6 ${
+                    plan.popular ? "text-accent" : "text-accent"
                   }`}
                 >
                   {t(plan.nameKey)}
                 </h3>
-              </div>
-
-              <div className="text-center mb-6">
-                <div className="flex items-baseline justify-center gap-1">
-                  <span
-                    className={`text-sm ${
-                      plan.popular
-                        ? "text-primary-foreground/70"
-                        : "text-muted-foreground"
-                    }`}
-                  >
+                <div className="flex items-baseline gap-1">
+                  <span className={`text-xs ${plan.popular ? "text-background/60" : "text-muted-foreground"}`}>
                     R$
                   </span>
-                  <span
-                    className={`text-4xl font-display font-bold ${
-                      plan.popular ? "text-gold" : "text-foreground"
-                    }`}
-                  >
+                  <span className={`text-4xl font-display font-semibold ${plan.popular ? "text-background" : "text-foreground"}`}>
                     {plan.price}
                   </span>
                 </div>
-                <p
-                  className={`text-sm mt-1 ${
-                    plan.popular
-                      ? "text-primary-foreground/60"
-                      : "text-muted-foreground"
-                  }`}
-                >
+                <p className={`text-xs mt-1 ${plan.popular ? "text-background/50" : "text-muted-foreground"}`}>
                   {t("pricing.perTour")}
                 </p>
                 {plan.totalPrice && (
-                  <p
-                    className={`text-xs mt-1 ${
-                      plan.popular
-                        ? "text-primary-foreground/50"
-                        : "text-muted-foreground/70"
-                    }`}
-                  >
+                  <p className={`text-xs mt-1 ${plan.popular ? "text-background/40" : "text-muted-foreground/70"}`}>
                     {t("pricing.total")}: R$ {plan.totalPrice}
                   </p>
                 )}
               </div>
 
-              <p
-                className={`text-sm mb-6 text-center ${
-                  plan.popular
-                    ? "text-primary-foreground/80"
-                    : "text-muted-foreground"
-                }`}
-              >
+              <p className={`text-sm mb-8 leading-relaxed ${plan.popular ? "text-background/70" : "text-muted-foreground"}`}>
                 {t(plan.descKey)}
               </p>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-10">
                 {plan.featureKeys.map((featureKey, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <Check
-                      className={`w-5 h-5 shrink-0 mt-0.5 ${
-                        plan.popular ? "text-gold" : "text-gold-dark"
-                      }`}
-                    />
-                    <span
-                      className={`text-sm ${
-                        plan.popular
-                          ? "text-primary-foreground/90"
-                          : "text-muted-foreground"
-                      }`}
-                    >
+                    <Check className={`w-4 h-4 shrink-0 mt-0.5 ${plan.popular ? "text-accent" : "text-accent"}`} />
+                    <span className={`text-sm ${plan.popular ? "text-background/80" : "text-muted-foreground"}`}>
                       {t(featureKey)}
                     </span>
                   </li>
@@ -160,7 +114,7 @@ const PricingSection = () => {
               </ul>
 
               <Button
-                variant={plan.popular ? "gold" : "navy"}
+                variant={plan.popular ? "hero" : "premium"}
                 size="lg"
                 className="w-full"
                 asChild
@@ -176,7 +130,7 @@ const PricingSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-center text-muted-foreground mt-10 max-w-3xl mx-auto bg-card border border-border rounded-xl p-6"
+          className="text-center text-sm text-muted-foreground mt-12 max-w-2xl mx-auto"
         >
           {t("pricing.footer")}
         </motion.p>

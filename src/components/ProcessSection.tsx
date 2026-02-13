@@ -20,59 +20,54 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section id="como-funciona" className="py-20 md:py-28 bg-background">
+    <section id="como-funciona" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-2xl mx-auto mb-20"
         >
-          <span className="inline-block bg-gold/10 text-gold-dark px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <span className="inline-block text-accent text-xs font-medium tracking-[0.3em] uppercase mb-4">
             {t("process.badge")}
           </span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-foreground mb-5">
             {t("process.title")}
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-muted-foreground leading-relaxed">
             {t("process.subtitle")}
           </p>
         </motion.div>
 
-        <div className="relative">
-          {/* Connection Line */}
-          <div className="hidden lg:block absolute top-24 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-gold/20 via-gold to-gold/20" />
+        <div className="grid md:grid-cols-5 gap-0 max-w-5xl mx-auto">
+          {steps.map((step, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="relative text-center px-4 py-8"
+            >
+              <div className="text-accent text-xs tracking-[0.2em] font-medium mb-4">
+                {step.step}
+              </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {steps.map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative text-center"
-              >
-                {/* Step Circle */}
-                <div className="relative z-10 w-20 h-20 mx-auto mb-6 bg-card rounded-full border-4 border-gold flex items-center justify-center shadow-gold">
-                  <step.icon className="w-8 h-8 text-gold-dark" />
-                </div>
+              <step.icon className="w-6 h-6 text-foreground mx-auto mb-4 stroke-[1.5]" />
 
-                {/* Step Number */}
-                <span className="inline-block text-sm font-bold text-gold mb-2">
-                  {t("process.step")} {step.step}
-                </span>
+              <h3 className="text-base font-display font-semibold text-foreground mb-2">
+                {t(step.titleKey)}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {t(step.descKey)}
+              </p>
 
-                <h3 className="text-xl font-display font-semibold text-foreground mb-3">
-                  {t(step.titleKey)}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed text-sm">
-                  {t(step.descKey)}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+              {index < steps.length - 1 && (
+                <div className="hidden md:block absolute top-1/2 -right-0 w-8 h-px bg-border" />
+              )}
+            </motion.div>
+          ))}
         </div>
 
         <motion.p
@@ -80,7 +75,7 @@ const ProcessSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="text-center text-muted-foreground mt-12 max-w-2xl mx-auto"
+          className="text-center text-sm text-muted-foreground mt-16 max-w-xl mx-auto"
         >
           {t("process.footer")}
         </motion.p>

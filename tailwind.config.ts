@@ -61,29 +61,22 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-          dark: "hsl(var(--gold-dark))",
-        },
-        charcoal: {
-          DEFAULT: "hsl(var(--charcoal))",
-          light: "hsl(var(--charcoal-light))",
-        },
-        sand: "hsl(var(--sand))",
-        "warm-white": "hsl(var(--warm-white))",
+        "off-white": "hsl(var(--off-white))",
+        beige: "hsl(var(--beige))",
+        "grey-light": "hsl(var(--grey-light))",
+        "grey-mid": "hsl(var(--grey-mid))",
+        graphite: "hsl(var(--graphite))",
         "section-alt": "hsl(var(--section-alt))",
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        md: "var(--radius)",
+        sm: "var(--radius)",
       },
       boxShadow: {
         sm: "var(--shadow-sm)",
         md: "var(--shadow-md)",
         lg: "var(--shadow-lg)",
-        gold: "var(--shadow-gold)",
       },
       keyframes: {
         "accordion-down": {

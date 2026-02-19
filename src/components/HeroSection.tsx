@@ -25,7 +25,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block text-accent text-xs font-medium tracking-[0.3em] uppercase mb-8">
+            <span className="inline-block text-background/50 text-xs font-medium tracking-[0.3em] uppercase mb-8">
               {t("hero.badge")}
             </span>
           </motion.div>

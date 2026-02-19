@@ -21,27 +21,27 @@ const Footer = () => {
             <span className="font-display font-semibold text-xl text-background tracking-wide">
               {t("footer.brand")}
             </span>
-            <p className="text-background/50 text-sm mt-4 max-w-sm leading-relaxed">
+            <p className="text-background/40 text-sm mt-4 max-w-sm leading-relaxed">
               {t("footer.desc")}
             </p>
             <div className="flex gap-4 mt-6">
               <a
                 href="#"
-                className="text-background/40 hover:text-accent transition-colors"
+                className="text-background/30 hover:text-background/70 transition-colors"
               >
-                <Instagram className="w-5 h-5 stroke-[1.5]" />
+                <Instagram className="w-4 h-4 stroke-[1.5]" />
               </a>
               <a
                 href="#"
-                className="text-background/40 hover:text-accent transition-colors"
+                className="text-background/30 hover:text-background/70 transition-colors"
               >
-                <Linkedin className="w-5 h-5 stroke-[1.5]" />
+                <Linkedin className="w-4 h-4 stroke-[1.5]" />
               </a>
               <a
                 href="#"
-                className="text-background/40 hover:text-accent transition-colors"
+                className="text-background/30 hover:text-background/70 transition-colors"
               >
-                <Facebook className="w-5 h-5 stroke-[1.5]" />
+                <Facebook className="w-4 h-4 stroke-[1.5]" />
               </a>
             </div>
           </div>
@@ -55,7 +55,7 @@ const Footer = () => {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-background/40 hover:text-accent transition-colors"
+                    className="text-sm text-background/30 hover:text-background/70 transition-colors"
                   >
                     {link.label}
                   </a>
@@ -68,11 +68,11 @@ const Footer = () => {
             <h4 className="text-xs font-medium tracking-[0.2em] uppercase text-background/60 mb-4">
               {t("footer.contact")}
             </h4>
-            <ul className="space-y-3 text-sm text-background/40">
+            <ul className="space-y-3 text-sm text-background/30">
               <li>
                 <a
                   href="tel:+5521988840669"
-                  className="hover:text-accent transition-colors"
+                  className="hover:text-background/70 transition-colors"
                 >
                   (21) 98884-0669
                 </a>
@@ -80,7 +80,7 @@ const Footer = () => {
               <li>
                 <a
                   href="mailto:contato@visitarestudio.com.br"
-                  className="hover:text-accent transition-colors"
+                  className="hover:text-background/70 transition-colors"
                 >
                   contato@visitarestudio.com.br
                 </a>
@@ -97,13 +97,13 @@ const Footer = () => {
           <div className="flex gap-6 text-xs">
             <a
               href="#"
-              className="text-background/30 hover:text-accent transition-colors"
+              className="text-background/20 hover:text-background/50 transition-colors"
             >
               {t("footer.privacy")}
             </a>
             <a
               href="#"
-              className="text-background/30 hover:text-accent transition-colors"
+              className="text-background/20 hover:text-background/50 transition-colors"
             >
               {t("footer.terms")}
             </a>

@@ -7,7 +7,7 @@ const CTASection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="contato" className="py-24 md:py-32 bg-background">
+    <section id="contato" className="py-28 md:py-36 bg-section-alt">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -16,7 +16,7 @@ const CTASection = () => {
           transition={{ duration: 0.5 }}
           className="max-w-2xl mx-auto text-center"
         >
-          <span className="inline-block text-accent text-xs font-medium tracking-[0.3em] uppercase mb-4">
+          <span className="inline-block text-muted-foreground text-xs font-medium tracking-[0.3em] uppercase mb-4">
             {t("cta.badge")}
           </span>
 
@@ -24,7 +24,7 @@ const CTASection = () => {
             {t("cta.title")}
           </h2>
 
-          <p className="text-muted-foreground mb-12 leading-relaxed">
+          <p className="text-muted-foreground mb-12 leading-relaxed text-sm">
             {t("cta.subtitle")}
           </p>
 
@@ -47,21 +47,21 @@ const CTASection = () => {
             </Button>
           </div>
 
-          <div className="w-16 h-px bg-border mx-auto mb-10" />
+          <div className="w-12 h-px bg-border mx-auto mb-10" />
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-muted-foreground">
             <a
               href="tel:+5521988840669"
               className="flex items-center gap-2 hover:text-foreground transition-colors"
             >
-              <Phone className="w-4 h-4 text-accent" />
+              <Phone className="w-3.5 h-3.5" />
               (21) 98884-0669
             </a>
             <a
               href="mailto:contato@visitarestudio.com.br"
               className="flex items-center gap-2 hover:text-foreground transition-colors"
             >
-              <Mail className="w-4 h-4 text-accent" />
+              <Mail className="w-3.5 h-3.5" />
               contato@visitarestudio.com.br
             </a>
           </div>

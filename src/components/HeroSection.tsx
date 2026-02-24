@@ -9,13 +9,16 @@ const HeroSection = () => {
 
   return (
     <section className="pt-16 md:pt-20">
-      {/* Clean image block — no text overlay */}
+      {/* 360 Tour Hero */}
       <div className="relative w-full h-[50vh] md:h-[70vh] lg:h-[80vh] overflow-hidden">
-        <img
-          src={heroBg}
-          alt="Interior de imóvel"
-          className="w-full h-full object-cover"
-        />
+        <iframe
+          src="https://kuula.co/share/LhRLp?logo=1&info=1&fs=0&vr=0&sd=1&autorotate=0.1&thumbs=1&alpha=0.60"
+          className="w-full h-full border-0"
+          allow="xr-spatial-tracking; gyroscope; accelerometer"
+          allowFullScreen
+          scrolling="no"
+          title="Tour Virtual 360"
+        ></iframe>
       </div>
 
       {/* Text content below the image */}

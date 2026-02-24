@@ -10,7 +10,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const FAQSection = () => {
   const { t } = useLanguage();
 
-  const faqKeys = [1, 2, 3, 4, 5, 6];
+  const faqKeys = [1, 2, 3, 4, 5, 6, 7, 8];
 
   return (
     <section id="faq" className="py-28 md:py-36 bg-section-alt">
@@ -28,9 +28,6 @@ const FAQSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-foreground mb-5">
             {t("faq.title")}
           </h2>
-          <p className="text-muted-foreground leading-relaxed text-sm">
-            {t("faq.subtitle")}
-          </p>
         </motion.div>
 
         <motion.div

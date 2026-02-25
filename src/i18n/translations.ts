@@ -11,17 +11,18 @@ export const translations: Record<Language, Record<string, string>> = {
     "nav.cta": "Falar no WhatsApp",
 
     // Hero
-    "hero.badge": "Tour Virtual 360° para Imóveis",
-    "hero.title.part1": "Apresente Seu Imóvel de Forma ",
+    "hero.badge": "Tour Virtual 360° para Imóveis e Comércios",
+    "hero.title.part1": "Apresente Seu Espaço de Forma ",
     "hero.title.highlight": "Profissional e Imersiva",
-    "hero.subtitle": "Ofereça uma experiência de visita virtual completa, permitindo que interessados explorem o imóvel de qualquer lugar, a qualquer hora.",
+    "hero.subtitle": "Ofereça uma experiência de visita virtual completa, permitindo que interessados explorem o espaço de qualquer lugar, a qualquer hora.",
     "hero.cta.primary": "Falar no WhatsApp",
     "hero.cta.secondary": "Ver Exemplos",
+    "hero.cta.tour": "Ver Tour Completo",
 
     // Benefits
     "benefits.badge": "Benefícios",
     "benefits.title": "Por Que Usar um Tour Virtual 360°?",
-    "benefits.subtitle": "Conheça as vantagens de apresentar seus imóveis com tecnologia 360°.",
+    "benefits.subtitle": "Conheça as vantagens de apresentar imóveis e comércios com tecnologia 360°.",
     "benefits.1.title": "Melhor Apresentação do Imóvel",
     "benefits.1.desc": "O tour virtual permite apresentar todos os ambientes de forma organizada e profissional, valorizando cada detalhe.",
     "benefits.2.title": "Economia de Tempo",
@@ -41,7 +42,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "process.subtitle": "Conheça as etapas para obter seu tour virtual 360°.",
     "process.step": "PASSO",
     "process.1.title": "Agendamento",
-    "process.1.desc": "Agendamento da visita no imóvel em data e horário combinados.",
+    "process.1.desc": "Agendamento da visita no local em data e horário combinados.",
     "process.2.title": "Captação",
     "process.2.desc": "Captação das imagens 360° utilizando equipamento próprio.",
     "process.3.title": "Edição",
@@ -55,7 +56,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Portfolio
     "portfolio.badge": "Nosso Trabalho",
     "portfolio.title": "Portfólio de Tours Virtuais",
-    "portfolio.subtitle": "Confira alguns dos nossos trabalhos e a qualidade que entregamos em cada projeto.",
+    "portfolio.subtitle": "Confira alguns dos nossos trabalhos em imóveis e comércios e a qualidade que entregamos em cada projeto.",
     "portfolio.project1.title": "Apartamento de Alto Padrão",
     "portfolio.project2.title": "Cozinha Gourmet",
     "portfolio.project3.title": "Banheiro Master",
@@ -66,7 +67,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Pricing (simplified)
     "pricing.badge": "Serviço",
     "pricing.title": "Tour Virtual 360°",
-    "pricing.subtitle": "Uma forma profissional e imersiva de apresentar imóveis online.",
+    "pricing.subtitle": "Uma forma profissional e imersiva de apresentar imóveis e comércios online.",
     "pricing.cta": "Solicitar Orçamento",
     "pricing.include.1": "Captação das imagens no local",
     "pricing.include.2": "Edição profissional",
@@ -74,6 +75,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "pricing.include.4": "Link pronto para compartilhamento",
     "pricing.include.5": "Compatível com celular e computador",
     "pricing.include.6": "Integração com site disponível",
+    "pricing.include.7": "Integração com Google Street View disponível",
 
     // FAQ (8 questions)
     "faq.badge": "Dúvidas",
@@ -94,6 +96,10 @@ export const translations: Record<Language, Record<string, string>> = {
     "faq.7.a": "O tour pode ficar disponível enquanto o imóvel estiver anunciado.",
     "faq.8.q": "O tour realmente ajuda a vender ou alugar?",
     "faq.8.a": "Sim. O tour permite que o cliente conheça melhor o imóvel antes da visita, atraindo interessados mais qualificados e economizando tempo.",
+    "faq.9.q": "Vocês fazem tours para comércios?",
+    "faq.9.a": "Sim. Também produzimos tours virtuais para lojas, escritórios, clínicas, restaurantes e outros tipos de estabelecimentos comerciais.",
+    "faq.10.q": "O tour pode ser integrado ao Google Street View?",
+    "faq.10.a": "Sim. Podemos integrar o tour virtual ao Google Street View, permitindo que clientes encontrem e explorem o espaço diretamente pelo Google.",
 
     // Differentials
     "diff.badge": "Diferenciais",
@@ -115,7 +121,7 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Footer
     "footer.brand": "Visitar Studio",
-    "footer.desc": "Especialistas em tours virtuais e fotografias 360° para o mercado imobiliário. Transforme a apresentação dos seus imóveis.",
+    "footer.desc": "Especialistas em tours virtuais e fotografias 360° para imóveis e comércios. Transforme a apresentação do seu espaço.",
     "footer.nav": "Navegação",
     "footer.contact": "Contato",
     "footer.rights": "Todos os direitos reservados.",
@@ -133,17 +139,18 @@ export const translations: Record<Language, Record<string, string>> = {
     "nav.cta": "Hablar por WhatsApp",
 
     // Hero
-    "hero.badge": "Tour Virtual 360° para Inmuebles",
-    "hero.title.part1": "Presente Su Inmueble de Forma ",
+    "hero.badge": "Tour Virtual 360° para Inmuebles y Comercios",
+    "hero.title.part1": "Presente Su Espacio de Forma ",
     "hero.title.highlight": "Profesional e Inmersiva",
-    "hero.subtitle": "Ofrezca una experiencia de visita virtual completa, permitiendo que los interesados exploren el inmueble desde cualquier lugar, a cualquier hora.",
+    "hero.subtitle": "Ofrezca una experiencia de visita virtual completa, permitiendo que los interesados exploren el espacio desde cualquier lugar, a cualquier hora.",
     "hero.cta.primary": "Hablar por WhatsApp",
     "hero.cta.secondary": "Ver Ejemplos",
+    "hero.cta.tour": "Ver Tour Completo",
 
     // Benefits
     "benefits.badge": "Beneficios",
     "benefits.title": "¿Por Qué Usar un Tour Virtual 360°?",
-    "benefits.subtitle": "Conozca las ventajas de presentar sus inmuebles con tecnología 360°.",
+    "benefits.subtitle": "Conozca las ventajas de presentar inmuebles y comercios con tecnología 360°.",
     "benefits.1.title": "Mejor Presentación del Inmueble",
     "benefits.1.desc": "El tour virtual permite presentar todos los ambientes de forma organizada y profesional, valorizando cada detalle.",
     "benefits.2.title": "Ahorro de Tiempo",
@@ -163,7 +170,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "process.subtitle": "Conozca las etapas para obtener su tour virtual 360°.",
     "process.step": "PASO",
     "process.1.title": "Agendamiento",
-    "process.1.desc": "Agendamiento de la visita al inmueble en fecha y horario acordados.",
+    "process.1.desc": "Agendamiento de la visita al lugar en fecha y horario acordados.",
     "process.2.title": "Captación",
     "process.2.desc": "Captación de las imágenes 360° utilizando equipo propio.",
     "process.3.title": "Edición",
@@ -177,7 +184,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Portfolio
     "portfolio.badge": "Nuestro Trabajo",
     "portfolio.title": "Portafolio de Tours Virtuales",
-    "portfolio.subtitle": "Vea algunos de nuestros trabajos y la calidad que entregamos en cada proyecto.",
+    "portfolio.subtitle": "Vea algunos de nuestros trabajos en inmuebles y comercios y la calidad que entregamos en cada proyecto.",
     "portfolio.project1.title": "Apartamento de Alto Estándar",
     "portfolio.project2.title": "Cocina Gourmet",
     "portfolio.project3.title": "Baño Principal",
@@ -188,7 +195,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Pricing (simplified)
     "pricing.badge": "Servicio",
     "pricing.title": "Tour Virtual 360°",
-    "pricing.subtitle": "Una forma profesional e inmersiva de presentar inmuebles online.",
+    "pricing.subtitle": "Una forma profesional e inmersiva de presentar inmuebles y comercios online.",
     "pricing.cta": "Solicitar Presupuesto",
     "pricing.include.1": "Captación de las imágenes en el lugar",
     "pricing.include.2": "Edición profesional",
@@ -196,6 +203,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "pricing.include.4": "Enlace listo para compartir",
     "pricing.include.5": "Compatible con celular y computador",
     "pricing.include.6": "Integración con sitio web disponible",
+    "pricing.include.7": "Integración con Google Street View disponible",
 
     // FAQ (8 questions)
     "faq.badge": "Dudas",
@@ -216,6 +224,10 @@ export const translations: Record<Language, Record<string, string>> = {
     "faq.7.a": "El tour puede quedar disponible mientras el inmueble esté anunciado.",
     "faq.8.q": "¿El tour realmente ayuda a vender o alquilar?",
     "faq.8.a": "Sí. El tour permite que el cliente conozca mejor el inmueble antes de la visita, atrayendo interesados más calificados y ahorrando tiempo.",
+    "faq.9.q": "¿Hacen tours para comercios?",
+    "faq.9.a": "Sí. También producimos tours virtuales para tiendas, oficinas, clínicas, restaurantes y otros tipos de establecimientos comerciales.",
+    "faq.10.q": "¿El tour puede integrarse a Google Street View?",
+    "faq.10.a": "Sí. Podemos integrar el tour virtual a Google Street View, permitiendo que los clientes encuentren y exploren el espacio directamente por Google.",
 
     // Differentials
     "diff.badge": "Diferenciales",
@@ -237,7 +249,7 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Footer
     "footer.brand": "Visitar Studio",
-    "footer.desc": "Especialistas en tours virtuales y fotografías 360° para el mercado inmobiliario. Transforme la presentación de sus inmuebles.",
+    "footer.desc": "Especialistas en tours virtuales y fotografías 360° para inmuebles y comercios. Transforme la presentación de su espacio.",
     "footer.nav": "Navegación",
     "footer.contact": "Contacto",
     "footer.rights": "Todos los derechos reservados.",
@@ -255,17 +267,18 @@ export const translations: Record<Language, Record<string, string>> = {
     "nav.cta": "Chat on WhatsApp",
 
     // Hero
-    "hero.badge": "360° Virtual Tour for Properties",
-    "hero.title.part1": "Present Your Property in a ",
+    "hero.badge": "360° Virtual Tour for Properties & Commercial Spaces",
+    "hero.title.part1": "Present Your Space in a ",
     "hero.title.highlight": "Professional and Immersive Way",
-    "hero.subtitle": "Offer a complete virtual visit experience, allowing interested parties to explore the property from anywhere, at any time.",
+    "hero.subtitle": "Offer a complete virtual visit experience, allowing interested parties to explore the space from anywhere, at any time.",
     "hero.cta.primary": "Chat on WhatsApp",
     "hero.cta.secondary": "View Examples",
+    "hero.cta.tour": "View Full Tour",
 
     // Benefits
     "benefits.badge": "Benefits",
     "benefits.title": "Why Use a 360° Virtual Tour?",
-    "benefits.subtitle": "Discover the advantages of presenting your properties with 360° technology.",
+    "benefits.subtitle": "Discover the advantages of presenting properties and commercial spaces with 360° technology.",
     "benefits.1.title": "Better Property Presentation",
     "benefits.1.desc": "The virtual tour allows you to present all spaces in an organized and professional way, enhancing every detail.",
     "benefits.2.title": "Time Savings",
@@ -285,7 +298,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "process.subtitle": "Learn the steps to get your 360° virtual tour.",
     "process.step": "STEP",
     "process.1.title": "Scheduling",
-    "process.1.desc": "Schedule the property visit on an agreed date and time.",
+    "process.1.desc": "Schedule the on-site visit on an agreed date and time.",
     "process.2.title": "Capture",
     "process.2.desc": "Capture 360° images using our own equipment.",
     "process.3.title": "Editing",
@@ -299,7 +312,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Portfolio
     "portfolio.badge": "Our Work",
     "portfolio.title": "Virtual Tours Portfolio",
-    "portfolio.subtitle": "Check out some of our work and the quality we deliver in every project.",
+    "portfolio.subtitle": "Check out some of our work in properties and commercial spaces and the quality we deliver in every project.",
     "portfolio.project1.title": "High-End Apartment",
     "portfolio.project2.title": "Gourmet Kitchen",
     "portfolio.project3.title": "Master Bathroom",
@@ -310,7 +323,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Pricing (simplified)
     "pricing.badge": "Service",
     "pricing.title": "360° Virtual Tour",
-    "pricing.subtitle": "A professional and immersive way to present properties online.",
+    "pricing.subtitle": "A professional and immersive way to present properties and commercial spaces online.",
     "pricing.cta": "Request a Quote",
     "pricing.include.1": "On-site image capture",
     "pricing.include.2": "Professional editing",
@@ -318,6 +331,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "pricing.include.4": "Ready-to-share link",
     "pricing.include.5": "Compatible with mobile and desktop",
     "pricing.include.6": "Website integration available",
+    "pricing.include.7": "Google Street View integration available",
 
     // FAQ (8 questions)
     "faq.badge": "Questions",
@@ -338,6 +352,10 @@ export const translations: Record<Language, Record<string, string>> = {
     "faq.7.a": "The tour can remain available as long as the property is listed.",
     "faq.8.q": "Does the tour really help sell or rent?",
     "faq.8.a": "Yes. The tour allows the client to better understand the property before visiting, attracting more qualified leads and saving time.",
+    "faq.9.q": "Do you create tours for commercial spaces?",
+    "faq.9.a": "Yes. We also produce virtual tours for shops, offices, clinics, restaurants, and other types of commercial establishments.",
+    "faq.10.q": "Can the tour be integrated with Google Street View?",
+    "faq.10.a": "Yes. We can integrate the virtual tour with Google Street View, allowing clients to find and explore the space directly through Google.",
 
     // Differentials
     "diff.badge": "Differentials",
@@ -359,7 +377,7 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Footer
     "footer.brand": "Visitar Studio",
-    "footer.desc": "Specialists in virtual tours and 360° photography for the real estate market. Transform the presentation of your properties.",
+    "footer.desc": "Specialists in virtual tours and 360° photography for properties and commercial spaces. Transform the presentation of your space.",
     "footer.nav": "Navigation",
     "footer.contact": "Contact",
     "footer.rights": "All rights reserved.",

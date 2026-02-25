@@ -73,6 +73,23 @@ const HeroSection = () => {
                 </a>
               </Button>
             </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="mt-4"
+            >
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase"
+              >
+                {t("hero.cta.tour")}
+                <ArrowRight className="w-3 h-3" />
+              </a>
+            </motion.div>
           </div>
         </div>
       </div>

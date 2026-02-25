@@ -19,6 +19,15 @@ const HeroSection = () => {
           scrolling="no"
           title="Tour Virtual 360"
         ></iframe>
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute bottom-4 right-4 md:bottom-6 md:right-6 inline-flex items-center gap-2 text-[10px] text-white/70 hover:text-white transition-colors tracking-wide uppercase bg-black/30 backdrop-blur-sm px-3 py-2 z-10"
+        >
+          {t("hero.cta.tour")}
+          <ArrowRight className="w-3 h-3" />
+        </a>
       </div>
 
       {/* Text content below the image */}
@@ -74,22 +83,6 @@ const HeroSection = () => {
               </Button>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-4"
-            >
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase"
-              >
-                {t("hero.cta.tour")}
-                <ArrowRight className="w-3 h-3" />
-              </a>
-            </motion.div>
           </div>
         </div>
       </div>

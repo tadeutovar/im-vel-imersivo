@@ -10,7 +10,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const FAQSection = () => {
   const { t } = useLanguage();
 
-  const faqKeys = [1, 2, 3, 4, 5, 6, 7, 8];
+  const faqKeys = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   return (
     <section id="faq" className="py-28 md:py-36 bg-section-alt">

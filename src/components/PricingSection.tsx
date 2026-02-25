@@ -13,6 +13,7 @@ const PricingSection = () => {
     "pricing.include.4",
     "pricing.include.5",
     "pricing.include.6",
+    "pricing.include.7",
   ];
 
   return (

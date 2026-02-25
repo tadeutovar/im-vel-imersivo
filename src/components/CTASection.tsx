@@ -40,7 +40,7 @@ const CTASection = () => {
               </a>
             </Button>
             <Button variant="premium" size="xl" asChild>
-              <a href="mailto:contato@visitarestudio.com.br">
+              <a href="mailto:contact@visitarstudio.com">
                 <Mail className="w-4 h-4" />
                 {t("cta.email")}
               </a>
@@ -58,11 +58,11 @@ const CTASection = () => {
               (21) 98884-0669
             </a>
             <a
-              href="mailto:contato@visitarestudio.com.br"
+              href="mailto:contact@visitarstudio.com"
               className="flex items-center gap-2 hover:text-foreground transition-colors"
             >
               <Mail className="w-3.5 h-3.5" />
-              contato@visitarestudio.com.br
+              contact@visitarstudio.com
             </a>
           </div>
         </motion.div>

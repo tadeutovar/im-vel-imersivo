@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "../assets/visitare-logo1.png";
+import logo from "../assets/visitarstudio-logo-removebg.png";
 import LanguageSelector from "@/components/LanguageSelector";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -30,11 +30,11 @@ const Header = () => {
           <a href="#" className="flex items-center gap-3">
             <img
               src={logo}
-              alt="Logo Visitare Studio"
+              alt="Logo Visitar Studio"
               className="w-10 h-10 object-contain"
             />
             <span className="font-display font-semibold text-xl text-foreground tracking-wide hidden sm:block">
-              Visitare Studio
+              Visitar Studio
             </span>
           </a>
 

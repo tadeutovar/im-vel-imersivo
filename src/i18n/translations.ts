@@ -114,7 +114,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "cta.email": "Enviar E-mail",
 
     // Footer
-    "footer.brand": "Visitare Studio",
+    "footer.brand": "Visitar Studio",
     "footer.desc": "Especialistas em tours virtuais e fotografias 360° para o mercado imobiliário. Transforme a apresentação dos seus imóveis.",
     "footer.nav": "Navegação",
     "footer.contact": "Contato",
@@ -236,7 +236,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "cta.email": "Enviar E-mail",
 
     // Footer
-    "footer.brand": "Visitare Studio",
+    "footer.brand": "Visitar Studio",
     "footer.desc": "Especialistas en tours virtuales y fotografías 360° para el mercado inmobiliario. Transforme la presentación de sus inmuebles.",
     "footer.nav": "Navegación",
     "footer.contact": "Contacto",
@@ -358,7 +358,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "cta.email": "Send E-mail",
 
     // Footer
-    "footer.brand": "Visitare Studio",
+    "footer.brand": "Visitar Studio",
     "footer.desc": "Specialists in virtual tours and 360° photography for the real estate market. Transform the presentation of your properties.",
     "footer.nav": "Navigation",
     "footer.contact": "Contact",

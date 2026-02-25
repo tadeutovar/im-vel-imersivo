@@ -79,10 +79,10 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:contato@visitarestudio.com.br"
+                  href="mailto:contact@visitarstudio.com"
                   className="hover:text-background/70 transition-colors"
                 >
-                  contato@visitarestudio.com.br
+                  contact@visitarstudio.com
                 </a>
               </li>
               <li>São Paulo, SP</li>
@@ -92,7 +92,7 @@ const Footer = () => {
 
         <div className="border-t border-background/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-background/30 text-xs">
-            © {currentYear} Visitare Studio. {t("footer.rights")}
+            © {currentYear} Visitar Studio. {t("footer.rights")}
           </p>
           <div className="flex gap-6 text-xs">
             <a

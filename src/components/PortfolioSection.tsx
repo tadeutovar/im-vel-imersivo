@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
-import portfolio1 from "@/assets/portfolio-rj1.jpeg";
+import portfolio1 from "@/assets/portfolio-rj.jpeg";
 import portfolio2 from "@/assets/portfolio-bcn.jpeg";
 import portfolio3 from "@/assets/portfolio-mallorca.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";

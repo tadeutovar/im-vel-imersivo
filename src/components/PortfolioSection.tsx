@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
+import portfolio1 from "@/assets/portfolio-rj1.jpeg";
+import portfolio2 from "@/assets/portfolio-bcn.jpeg";
+import portfolio3 from "@/assets/portfolio-mallorca.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const PortfolioSection = () => {
@@ -13,20 +13,23 @@ const PortfolioSection = () => {
     {
       image: portfolio1,
       titleKey: "portfolio.project1.title",
-      location: "Jardins, São Paulo",
+      location: "Rio de Janeiro, Brazil",
       typeKey: "portfolio.type.residential",
+      link: "https://kuula.co/share/collection/7M0sR?logo=-1&info=0&fs=1&vr=0&sd=1&gyro=0&thumbs=1&margin=22&alpha=0.68&inst=0"
     },
     {
       image: portfolio2,
       titleKey: "portfolio.project2.title",
-      location: "Alphaville, SP",
+      location: "Barcelona, Spain",
       typeKey: "portfolio.type.residential",
+      link: "https://kuula.co/share/collection/7M0wZ?logo=-1&info=0&fs=1&vr=0&sd=1&gyro=0&thumbs=1&margin=22&alpha=0.68&inst=0"
     },
     {
       image: portfolio3,
       titleKey: "portfolio.project3.title",
-      location: "Moema, São Paulo",
+      location: "Mallorca, Spain",
       typeKey: "portfolio.type.residential",
+      link: "https://kuula.co/share/collection/7Mfyj?logo=-1&info=0&fs=1&vr=0&sd=1&gyro=0&thumbs=1&margin=22&alpha=0.68&inst=0"
     },
   ];
 
@@ -53,6 +56,12 @@ const PortfolioSection = () => {
 
         <div className="grid md:grid-cols-3 gap-6">
           {projects.map((project, index) => (
+            <a 
+                key={index}
+                href={project.link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 16 }}
@@ -84,6 +93,7 @@ const PortfolioSection = () => {
                 <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors mt-1" />
               </div>
             </motion.div>
+            </a>
           ))}
         </div>
 

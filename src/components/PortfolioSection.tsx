@@ -15,21 +15,21 @@ const PortfolioSection = () => {
       titleKey: "portfolio.project1.title",
       location: "Rio de Janeiro, Brazil",
       typeKey: "portfolio.type.residential",
-      link: "https://kuula.co/share/collection/7M0sR?logo=-1&info=0&fs=1&vr=0&sd=1&gyro=0&thumbs=1&margin=22&alpha=0.68&inst=0"
+      link: "https://tour.visitarstudio.com/casa-urca-001"
     },
     {
       image: portfolio2,
       titleKey: "portfolio.project2.title",
       location: "Barcelona, Spain",
       typeKey: "portfolio.type.residential",
-      link: "https://kuula.co/share/collection/7M0wZ?logo=-1&info=0&fs=1&vr=0&sd=1&gyro=0&thumbs=1&margin=22&alpha=0.68&inst=0"
+      link: "https://tour.visitarstudio.com/montgat-house-001"
     },
     {
       image: portfolio3,
       titleKey: "portfolio.project3.title",
       location: "Mallorca, Spain",
       typeKey: "portfolio.type.residential",
-      link: "https://kuula.co/share/collection/7Mfyj?logo=-1&info=0&fs=1&vr=0&sd=1&gyro=0&thumbs=1&margin=22&alpha=0.68&inst=0"
+      link: "https://tour.visitarstudio.com/finca-lluc-house-001"
     },
   ];
 

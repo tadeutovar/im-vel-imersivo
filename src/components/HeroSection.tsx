@@ -20,7 +20,7 @@ const HeroSection = () => {
           title="Tour Virtual 360"
         ></iframe>
         <a
-          href="#"
+          href="https://tour.visitarstudio.com/montgat-house-001"
           target="_blank"
           rel="noopener noreferrer"
           className="absolute bottom-4 right-4 md:bottom-6 md:right-6 inline-flex items-center gap-2 text-[10px] text-white/70 hover:text-white transition-colors tracking-wide uppercase bg-black/30 backdrop-blur-sm px-3 py-2 z-10"

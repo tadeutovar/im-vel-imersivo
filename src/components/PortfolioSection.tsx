@@ -29,7 +29,7 @@ const PortfolioSection = () => {
       titleKey: "portfolio.project3.title",
       location: "Mallorca, Spain",
       typeKey: "portfolio.type.residential",
-      link: "https://tour.visitarstudio.com/finca-lluc-house-001"
+      link: "https://tour.visitarstudio.com/finca-lluc-001"
     },
   ];
 

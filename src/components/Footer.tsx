@@ -4,7 +4,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { t, language } = useLanguage();
-  const phone = language === "pt" ? "+5521988840669" : "+447590124405";
+  const phone = language === "pt" ? "+5521973596255" : "+447590124405";
   const phoneDisplay = language === "pt" ? "(21) 98884-0669" : "+44 7590 124405";
 
   const navLinks = [

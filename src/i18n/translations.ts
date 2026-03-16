@@ -60,7 +60,9 @@ export const translations: Record<Language, Record<string, string>> = {
     "portfolio.project1.title": "Duplex de Alto Padrão",
     "portfolio.project2.title": "Casa Contemporânea",
     "portfolio.project3.title": "Propriedade Histórica",
+    "portfolio.project4.title": "Showroom Moderno",
     "portfolio.type.residential": "Residencial",
+    "portfolio.type.commercial": "Comercial",
     "portfolio.viewTour": "Ver Tour 360°",
     "portfolio.cta": "Solicitar Tour Para Seu Imóvel",
 
@@ -188,7 +190,9 @@ export const translations: Record<Language, Record<string, string>> = {
     "portfolio.project1.title": "Dúplex de Lujo",
     "portfolio.project2.title": "Casa Contemporánea",
     "portfolio.project3.title": "Propiedad Histórica",
+    "portfolio.project4.title": "Showroom Moderno",
     "portfolio.type.residential": "Residencial",
+    "portfolio.type.commercial": "Comercial",
     "portfolio.viewTour": "Ver Tour 360°",
     "portfolio.cta": "Solicitar Tour Para Su Inmueble",
 
@@ -316,7 +320,9 @@ export const translations: Record<Language, Record<string, string>> = {
     "portfolio.project1.title": "Luxury Duplex",
     "portfolio.project2.title": "Contemporary House",
     "portfolio.project3.title": "Historic Property",
+    "portfolio.project4.title": "Modern Showroom",
     "portfolio.type.residential": "Residential",
+    "portfolio.type.commercial": "Commercial",
     "portfolio.viewTour": "View 360° Tour",
     "portfolio.cta": "Request a Tour for Your Property",
 

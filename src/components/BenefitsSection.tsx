@@ -22,7 +22,7 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section id="beneficios" className="py-28 md:py-36 bg-section-alt">
+    <section id="beneficios" className="py-28 md:py-36 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 16 }}

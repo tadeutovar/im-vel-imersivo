@@ -31,10 +31,17 @@ const PortfolioSection = () => {
       typeKey: "portfolio.type.residential",
       link: "https://tour.visitarstudio.com/finca-lluc-001"
     },
+    {
+      image: "/placeholder.svg",
+      titleKey: "portfolio.project4.title",
+      location: "São Paulo, Brazil",
+      typeKey: "portfolio.type.commercial",
+      link: "#"
+    },
   ];
 
   return (
-    <section id="portfolio" className="py-28 md:py-36 bg-background">
+    <section id="portfolio" className="py-28 md:py-36 bg-section-alt">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -54,7 +61,7 @@ const PortfolioSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {projects.map((project, index) => (
             <a 
                 key={index}

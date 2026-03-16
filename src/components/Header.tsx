@@ -11,9 +11,9 @@ const Header = () => {
   const { t } = useLanguage();
 
   const navLinks = [
+    { href: "#portfolio", label: t("nav.portfolio") },
     { href: "#beneficios", label: t("nav.benefits") },
     { href: "#como-funciona", label: t("nav.howItWorks") },
-    { href: "#portfolio", label: t("nav.portfolio") },
     { href: "#precos", label: t("nav.pricing") },
     { href: "#faq", label: t("nav.faq") },
   ];

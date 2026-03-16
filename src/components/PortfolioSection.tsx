@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
-import portfolio1 from "@/assets/portfolio-rj.jpeg";
+import portfolio1 from "@/assets/portfolio-urca.jpeg";
 import portfolio2 from "@/assets/portfolio-bcn.jpg";
 import portfolio3 from "@/assets/portfolio-mallorca.jpeg";
+import portfolio4 from "@/assets/portfolio-fendi-home.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const PortfolioSection = () => {
@@ -11,11 +12,11 @@ const PortfolioSection = () => {
 
   const projects = [
     {
-      image: portfolio1,
-      titleKey: "portfolio.project1.title",
-      location: "Rio de Janeiro, Brazil",
+      image: portfolio4,
+      titleKey: "portfolio.project4.title",
+      location: "London, England",
       typeKey: "portfolio.type.residential",
-      link: "https://tour.visitarstudio.com/casa-urca-001"
+      link: "https://tour.visitarstudio.com/london-fendi-home"
     },
     {
       image: portfolio2,
@@ -32,12 +33,13 @@ const PortfolioSection = () => {
       link: "https://tour.visitarstudio.com/finca-lluc-001"
     },
     {
-      image: "/placeholder.svg",
-      titleKey: "portfolio.project4.title",
-      location: "São Paulo, Brazil",
-      typeKey: "portfolio.type.commercial",
-      link: "#"
+      image: portfolio1,
+      titleKey: "portfolio.project1.title",
+      location: "Rio de Janeiro, Brazil",
+      typeKey: "portfolio.type.residential",
+      link: "https://tour.visitarstudio.com/casa-urca-001"
     },
+    
   ];
 
   return (

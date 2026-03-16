@@ -31,7 +31,7 @@ const CTASection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button variant="hero" size="xl" asChild>
               <a
-                href="https://wa.me/5521988840669?text=Ol%C3%A1!%20Vi%20os%20planos%20no%20site%20e%20gostaria%20de%20confirmar%20o%20melhor%20para%20meu%20im%C3%B3vel%20e%20verificar%20disponibilidade."
+                href="https://wa.me/5521973596255?"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -51,7 +51,7 @@ const CTASection = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-muted-foreground">
             <a
-              href="tel:+5521988840669"
+              href="tel:+5521973596255"
               className="flex items-center gap-2 hover:text-foreground transition-colors"
             >
               <Phone className="w-3.5 h-3.5" />

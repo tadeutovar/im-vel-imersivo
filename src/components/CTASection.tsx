@@ -34,7 +34,7 @@ const CTASection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button variant="hero" size="xl" asChild>
               <a
-                href="https://wa.me/5521973596255?"
+                href={waLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >

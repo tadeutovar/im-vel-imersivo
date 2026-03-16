@@ -31,6 +31,13 @@ const PortfolioSection = () => {
       typeKey: "portfolio.type.residential",
       link: "https://tour.visitarstudio.com/finca-lluc-001"
     },
+    {
+      image: "/placeholder.svg",
+      titleKey: "portfolio.project4.title",
+      location: "São Paulo, Brazil",
+      typeKey: "portfolio.type.commercial",
+      link: "#"
+    },
   ];
 
   return (

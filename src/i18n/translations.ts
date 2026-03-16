@@ -60,7 +60,9 @@ export const translations: Record<Language, Record<string, string>> = {
     "portfolio.project1.title": "Duplex de Alto Padrão",
     "portfolio.project2.title": "Casa Contemporânea",
     "portfolio.project3.title": "Propriedade Histórica",
+    "portfolio.project4.title": "Showroom Moderno",
     "portfolio.type.residential": "Residencial",
+    "portfolio.type.commercial": "Comercial",
     "portfolio.viewTour": "Ver Tour 360°",
     "portfolio.cta": "Solicitar Tour Para Seu Imóvel",
 

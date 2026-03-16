@@ -54,11 +54,11 @@ const CTASection = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-muted-foreground">
             <a
-              href="tel:+5521973596255"
+              href={`tel:${phone}`}
               className="flex items-center gap-2 hover:text-foreground transition-colors"
             >
               <Phone className="w-3.5 h-3.5" />
-              (21) 98884-0669
+              {phoneDisplay}
             </a>
             <a
               href="mailto:contact@visitarstudio.com"

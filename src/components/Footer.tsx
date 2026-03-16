@@ -87,7 +87,7 @@ const Footer = () => {
                   contact@visitarstudio.com
                 </a>
               </li>
-              <li>São Paulo, SP</li>
+              
             </ul>
           </div>
         </div>

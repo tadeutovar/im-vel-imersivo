@@ -320,7 +320,9 @@ export const translations: Record<Language, Record<string, string>> = {
     "portfolio.project1.title": "Luxury Duplex",
     "portfolio.project2.title": "Contemporary House",
     "portfolio.project3.title": "Historic Property",
+    "portfolio.project4.title": "Modern Showroom",
     "portfolio.type.residential": "Residential",
+    "portfolio.type.commercial": "Commercial",
     "portfolio.viewTour": "View 360° Tour",
     "portfolio.cta": "Request a Tour for Your Property",
 

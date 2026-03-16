@@ -6,7 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const CTASection = () => {
   const { t, language } = useLanguage();
   const phone = language === "pt" ? "+5521973596255" : "+447590124405";
-  const phoneDisplay = language === "pt" ? "(21) 98884-0669" : "+44 7590 124405";
+  const phoneDisplay = language === "pt" ? "(21) 97359-6255" : "+44 7590 124405";
   const waLink = `https://wa.me/${phone.replace(/\+/g, "")}?`;
 
   return (

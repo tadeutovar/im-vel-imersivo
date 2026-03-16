@@ -12,7 +12,7 @@ const HeroSection = () => {
       {/* 360 Tour Hero */}
       <div className="relative w-full h-[50vh] md:h-[70vh] lg:h-[80vh] overflow-hidden">
         <iframe
-          src="https://kuula.co/share/LLdlj?logo=-1&info=0&fs=0&vr=0&sd=1&gyro=0&autorotate=0.04&thumbs=1&margin=22&alpha=0.68&inst=0"
+          src="https://tour.visitarstudio.com/share/Lpv78?logo=-1&info=0&fs=0&vr=0&sd=1&gyro=0&autorotate=0.06&thumbs=1&margin=22&alpha=0.68&inst=0"
           className="w-full h-full border-0"
           allow="xr-spatial-tracking; gyroscope; accelerometer"
           allowFullScreen

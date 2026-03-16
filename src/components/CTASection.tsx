@@ -4,7 +4,10 @@ import { Phone, Mail, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const CTASection = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const phone = language === "pt" ? "+5521988840669" : "+447590124405";
+  const phoneDisplay = language === "pt" ? "(21) 98884-0669" : "+44 7590 124405";
+  const waLink = `https://wa.me/${phone.replace(/\+/g, "")}?`;
 
   return (
     <section id="contato" className="py-28 md:py-36 bg-section-alt">
@@ -31,7 +34,7 @@ const CTASection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button variant="hero" size="xl" asChild>
               <a
-                href="https://wa.me/5521973596255?"
+                href={waLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -51,11 +54,11 @@ const CTASection = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-muted-foreground">
             <a
-              href="tel:+5521973596255"
+              href={`tel:${phone}`}
               className="flex items-center gap-2 hover:text-foreground transition-colors"
             >
               <Phone className="w-3.5 h-3.5" />
-              (21) 98884-0669
+              {phoneDisplay}
             </a>
             <a
               href="mailto:contact@visitarstudio.com"

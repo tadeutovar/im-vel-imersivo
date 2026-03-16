@@ -3,7 +3,9 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const phone = language === "pt" ? "+5521988840669" : "+447590124405";
+  const phoneDisplay = language === "pt" ? "(21) 98884-0669" : "+44 7590 124405";
 
   const navLinks = [
     { label: t("nav.benefits"), href: "#beneficios" },
@@ -71,10 +73,10 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-background/30">
               <li>
                 <a
-                  href="tel:+5521973596255"
+                  href={`tel:${phone}`}
                   className="hover:text-background/70 transition-colors"
                 >
-                  (21) 98884-0669
+                  {phoneDisplay}
                 </a>
               </li>
               <li>
@@ -85,7 +87,7 @@ const Footer = () => {
                   contact@visitarstudio.com
                 </a>
               </li>
-              <li>São Paulo, SP</li>
+              
             </ul>
           </div>
         </div>

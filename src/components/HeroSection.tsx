@@ -11,14 +11,11 @@ const HeroSection = () => {
     <section className="pt-16 md:pt-20">
       {/* 360 Tour Hero */}
       <div className="relative w-full h-[50vh] md:h-[70vh] lg:h-[80vh] overflow-hidden">
-        <iframe
-          src="https://tour.visitarstudio.com/share/Lpv78?logo=-1&info=0&fs=0&vr=0&sd=1&gyro=0&autorotate=0.06&thumbs=1&margin=22&alpha=0.68&inst=0"
-          className="w-full h-full border-0"
-          allow="xr-spatial-tracking; gyroscope; accelerometer"
-          allowFullScreen
-          scrolling="no"
-          title="Tour Virtual 360"
-        ></iframe>
+        <iframe 
+        className="w-full h-full border-0"
+        allow="xr-spatial-tracking; gyroscope; accelerometer"  
+        scrolling="no" 
+        src="https://kuula.co/share/Lpv78?logo=-1&info=0&fs=0&vr=0&gyro=0&autorotate=0.06&thumbs=1&alpha=0.60&inst=0&keys=0"></iframe>
         <a
           href="https://tour.visitarstudio.com/montgat-house-001"
           target="_blank"

@@ -16,6 +16,7 @@ const Header = () => {
     { href: "#como-funciona", label: t("nav.howItWorks") },
     { href: "#precos", label: t("nav.pricing") },
     { href: "#faq", label: t("nav.faq") },
+    { href: "#contact", label: t("nav.contact") },
   ];
 
   return (

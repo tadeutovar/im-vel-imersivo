@@ -114,6 +114,15 @@ export const translations: Record<Language, Record<string, string>> = {
     "diff.3.title": "Apresentação Profissional",
     "diff.3.desc": "Nosso objetivo é oferecer uma apresentação profissional que eleve a percepção de valor do imóvel.",
 
+    // Contact Section
+    "nav.contact": "Contato",
+    "contact.badge": "Contato internacional",
+    "contact.title": "Fale com nossa equipe",
+    "contact.brazil": "Brasil — Rio de Janeiro",
+    "contact.spain": "Espanha — Barcelona",
+    "contact.uk": "Reino Unido — Londres",
+    "contact.availability": "Disponível via WhatsApp & SMS",
+
     // CTA
     "cta.badge": "Entre em Contato",
     "cta.title": "Agendar meu Tour Virtual",
@@ -244,6 +253,15 @@ export const translations: Record<Language, Record<string, string>> = {
     "diff.3.title": "Presentación Profesional",
     "diff.3.desc": "Nuestro objetivo es ofrecer una presentación profesional que eleve la percepción de valor del inmueble.",
 
+    // Contact Section
+    "nav.contact": "Contacto",
+    "contact.badge": "Contacto internacional",
+    "contact.title": "Hable con nuestro equipo",
+    "contact.brazil": "Brasil — Río de Janeiro",
+    "contact.spain": "España — Barcelona",
+    "contact.uk": "Reino Unido — Londres",
+    "contact.availability": "Disponible vía WhatsApp & SMS",
+
     // CTA
     "cta.badge": "Contáctenos",
     "cta.title": "Agendar mi Tour Virtual",
@@ -373,6 +391,15 @@ export const translations: Record<Language, Record<string, string>> = {
     "diff.2.desc": "We use 360° capture technology and an organized workflow to ensure consistency in every project.",
     "diff.3.title": "Professional Presentation",
     "diff.3.desc": "Our goal is to offer a professional presentation that elevates the perceived value of the property.",
+
+    // Contact Section
+    "nav.contact": "Contact",
+    "contact.badge": "International contact",
+    "contact.title": "Speak with our team",
+    "contact.brazil": "Brazil — Rio de Janeiro",
+    "contact.spain": "Spain — Barcelona",
+    "contact.uk": "UK — London",
+    "contact.availability": "Available via WhatsApp & SMS",
 
     // CTA
     "cta.badge": "Get in Touch",

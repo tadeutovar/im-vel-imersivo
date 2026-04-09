@@ -54,7 +54,7 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <LanguageSelector />
             <Button variant="premium" size="default" className="hidden sm:flex" asChild>
-              <a href="#contato">{t("nav.cta")}</a>
+              <a href="#contact">{t("nav.cta")}</a>
             </Button>
 
             <button
@@ -84,7 +84,7 @@ const Header = () => {
                 </a>
               ))}
               <Button variant="premium" size="lg" className="mt-4" asChild>
-                <a href="#contato">{t("nav.cta")}</a>
+                <a href="#contact">{t("nav.cta")}</a>
               </Button>
             </div>
           </motion.nav>

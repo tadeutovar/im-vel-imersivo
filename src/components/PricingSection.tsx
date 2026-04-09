@@ -54,7 +54,7 @@ const PricingSection = () => {
             </ul>
 
             <Button variant="premium" size="lg" className="w-full" asChild>
-              <a href="#contato">{t("pricing.cta")}</a>
+              <a href="#contact">{t("pricing.cta")}</a>
             </Button>
           </motion.div>
         </div>

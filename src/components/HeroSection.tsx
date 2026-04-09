@@ -67,7 +67,7 @@ const HeroSection = () => {
               className="flex flex-col sm:flex-row gap-4"
             >
               <Button variant="hero" size="xl" asChild>
-                <a href="#contato">
+                <a href="#contact">
                   {t("hero.cta.primary")}
                   <ArrowRight className="w-4 h-4" />
                 </a>

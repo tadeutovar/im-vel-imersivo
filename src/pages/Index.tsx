@@ -25,7 +25,6 @@ const Index = () => {
           <FAQSection />
           <DifferentialsSection />
           <ContactSection />
-          <CTASection />
         </main>
         <Footer />
       </div>

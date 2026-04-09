@@ -114,7 +114,7 @@ const PortfolioSection = () => {
           className="text-center mt-16"
         >
           <Button variant="premium" size="lg" asChild>
-            <a href="#contato">
+            <a href="#contact">
               {t("portfolio.cta")}
             </a>
           </Button>

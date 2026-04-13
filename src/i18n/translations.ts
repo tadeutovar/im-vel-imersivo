@@ -119,7 +119,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "contact.badge": "Contato internacional",
     "contact.title": "Fale com nossa equipe",
     "contact.brazil": "Brasil — Rio de Janeiro",
-    "contact.spain": "Espanha — Barcelona",
+    "contact.spain": "Espanha — Mallorca",
     "contact.uk": "Reino Unido — Londres",
     "contact.availability": "Disponível via WhatsApp & SMS",
 
@@ -258,7 +258,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "contact.badge": "Contacto internacional",
     "contact.title": "Hable con nuestro equipo",
     "contact.brazil": "Brasil — Río de Janeiro",
-    "contact.spain": "España — Barcelona",
+    "contact.spain": "España — Mallorca",
     "contact.uk": "Reino Unido — Londres",
     "contact.availability": "Disponible vía WhatsApp & SMS",
 
@@ -397,7 +397,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "contact.badge": "International contact",
     "contact.title": "Speak with our team",
     "contact.brazil": "Brazil — Rio de Janeiro",
-    "contact.spain": "Spain — Barcelona",
+    "contact.spain": "Spain — Mallorca",
     "contact.uk": "UK — London",
     "contact.availability": "Available via WhatsApp & SMS",
 

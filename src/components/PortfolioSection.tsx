@@ -30,7 +30,7 @@ const PortfolioSection = () => {
       titleKey: "portfolio.project3.title",
       location: "Rio de de Janeiro, Brazil",
       typeKey: "portfolio.type.residential",
-      link: "https://tour.visitarstudio.com/finca-lluc-001"
+      link: "https://tour.visitarstudio.com/rj-exemplo-01"
     },
     {
       image: portfolio1,

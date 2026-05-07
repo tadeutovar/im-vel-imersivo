@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import portfolio1 from "@/assets/portfolio-urca.jpeg";
 import portfolio2 from "@/assets/portfolio-bcn.jpg";
-import portfolio3 from "@/assets/portfolio-mallorca.jpeg";
+import portfolio3 from "@/assets/portfolio-praiadabarra2.jpeg";
 import portfolio4 from "@/assets/portfolio-fendi-home.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -28,7 +28,7 @@ const PortfolioSection = () => {
     {
       image: portfolio3,
       titleKey: "portfolio.project3.title",
-      location: "Mallorca, Spain",
+      location: "Rio de de Janeiro, Brazil",
       typeKey: "portfolio.type.residential",
       link: "https://tour.visitarstudio.com/finca-lluc-001"
     },

@@ -2,22 +2,41 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/visitarstudio-logo-removebg.png";
 import LanguageSelector from "@/components/LanguageSelector";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const phone = language === "pt" ? "+5521973596255" : "+447590124405";
+  const waLink = `https://wa.me/${phone.replace(/\+/g, "")}`;
 
   const navLinks = [
-    { href: "#portfolio", label: t("nav.portfolio") },
-    { href: "#beneficios", label: t("nav.benefits") },
-    { href: "#como-funciona", label: t("nav.howItWorks") },
-    { href: "#precos", label: t("nav.pricing") },
-    { href: "#faq", label: t("nav.faq") },
-    { href: "#contact", label: t("nav.contact") },
+    { href: "/imoveis", label: t("nav.imoveis"), type: "route" as const },
+    { href: "/negocios", label: t("nav.negocios"), type: "route" as const },
+    { href: "/#precos", label: t("nav.pricing"), type: "anchor" as const },
+    { href: "/#faq", label: t("nav.faq"), type: "anchor" as const },
+    { href: "/#contact", label: t("nav.contact"), type: "anchor" as const },
   ];
+
+  const renderLink = (link: typeof navLinks[number], onClick?: () => void) => {
+    const className =
+      "text-muted-foreground hover:text-foreground transition-colors text-sm tracking-wide uppercase";
+    if (link.type === "route") {
+      return (
+        <Link key={link.href} to={link.href} className={className} onClick={onClick}>
+          {link.label}
+        </Link>
+      );
+    }
+    return (
+      <a key={link.href} href={link.href} className={className} onClick={onClick}>
+        {link.label}
+      </a>
+    );
+  };
 
   return (
     <motion.header
@@ -28,7 +47,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <img
               src={logo}
               alt="Logo Visitar Studio"
@@ -37,24 +56,18 @@ const Header = () => {
             <span className="font-display font-semibold text-xl text-foreground tracking-wide hidden sm:block">
               Visitar Studio
             </span>
-          </a>
+          </Link>
 
           <nav className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors text-sm tracking-wide uppercase"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) => renderLink(link))}
           </nav>
 
           <div className="flex items-center gap-4">
             <LanguageSelector />
             <Button variant="premium" size="default" className="hidden sm:flex" asChild>
-              <a href="#contact">{t("nav.cta")}</a>
+              <a href={waLink} target="_blank" rel="noopener noreferrer">
+                {t("nav.cta")}
+              </a>
             </Button>
 
             <button
@@ -73,18 +86,11 @@ const Header = () => {
             className="lg:hidden py-6 border-t border-border"
           >
             <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors text-sm tracking-wide uppercase py-1"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ))}
+              {navLinks.map((link) => renderLink(link, () => setIsMenuOpen(false)))}
               <Button variant="premium" size="lg" className="mt-4" asChild>
-                <a href="#contact">{t("nav.cta")}</a>
+                <a href={waLink} target="_blank" rel="noopener noreferrer">
+                  {t("nav.cta")}
+                </a>
               </Button>
             </div>
           </motion.nav>

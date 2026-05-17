@@ -1,6 +1,321 @@
 export type Language = "pt" | "es" | "en";
 
-export const translations: Record<Language, Record<string, string>> = {
+const ptExtras: Record<string, string> = {
+  "nav.imoveis": "Imóveis",
+  "nav.negocios": "Negócios",
+
+  // Home segmentation
+  "home.seg.badge": "Soluções",
+  "home.seg.title": "Para cada espaço, uma experiência imersiva",
+  "home.seg.card1.title": "Para seu imóvel",
+  "home.seg.card1.desc": "Tours virtuais e apresentações imersivas para imóveis, arquitetura, interiores e mercado imobiliário.",
+  "home.seg.card1.cta": "Explorar imóveis",
+  "home.seg.card2.title": "Para seu negócio",
+  "home.seg.card2.desc": "Experiências digitais para restaurantes, hotéis, lojas, beach clubs, academias e negócios físicos.",
+  "home.seg.card2.cta": "Explorar negócios",
+
+  // Imoveis page
+  "im.hero.badge": "Imóveis",
+  "im.hero.title": "Tours Virtuais 360° para Imóveis",
+  "im.hero.subtitle": "Apresente imóveis de forma sofisticada, moderna e imersiva com tours virtuais profissionais.",
+  "im.hero.cta": "Solicitar orçamento",
+
+  "im.benefits.badge": "Benefícios",
+  "im.benefits.title": "Por que utilizar tours virtuais em imóveis?",
+  "im.b.1.title": "Mais percepção de valor",
+  "im.b.1.desc": "Uma apresentação imersiva transmite mais sofisticação e valor para o imóvel.",
+  "im.b.2.title": "Destaque nos anúncios",
+  "im.b.2.desc": "Tours virtuais tornam o imóvel mais atrativo e diferenciado em plataformas e redes sociais.",
+  "im.b.3.title": "Menos visitas improdutivas",
+  "im.b.3.desc": "Interessados conseguem conhecer melhor o imóvel antes da visita presencial.",
+  "im.b.4.title": "Apresentação profissional",
+  "im.b.4.desc": "Uma experiência moderna transmite mais profissionalismo e credibilidade.",
+  "im.b.5.title": "Disponível 24 horas",
+  "im.b.5.desc": "O imóvel pode ser visitado virtualmente a qualquer momento e de qualquer lugar.",
+  "im.b.6.title": "Compatível com todos os dispositivos",
+  "im.b.6.desc": "Funciona perfeitamente em celulares, tablets e computadores.",
+
+  "im.segments.badge": "Segmentos",
+  "im.segments.title": "Soluções para diferentes segmentos do mercado imobiliário",
+  "im.s.1.title": "Imobiliárias",
+  "im.s.1.desc": "Apresente imóveis com mais qualidade visual e destaque seus anúncios da concorrência.",
+  "im.s.2.title": "Corretores",
+  "im.s.2.desc": "Ofereça uma experiência mais profissional e facilite a apresentação dos imóveis para clientes.",
+  "im.s.3.title": "Airbnb e aluguel por temporada",
+  "im.s.3.desc": "Mostre os ambientes de forma completa e aumente a confiança dos hóspedes antes da reserva.",
+  "im.s.4.title": "Arquitetura e interiores",
+  "im.s.4.desc": "Valorize projetos arquitetônicos com uma apresentação imersiva e sofisticada.",
+  "im.s.5.title": "Construtoras",
+  "im.s.5.desc": "Apresente empreendimentos de forma moderna e profissional para potenciais compradores.",
+
+  "im.cta.title": "Vamos apresentar seu imóvel de forma profissional?",
+  "im.cta.subtitle": "Entre em contato e solicite um orçamento para seu tour virtual.",
+  "im.cta.whatsapp": "Falar no WhatsApp",
+  "im.cta.quote": "Solicitar orçamento",
+
+  // Negocios page
+  "ng.hero.badge": "Negócios",
+  "ng.hero.title": "Tours Virtuais para Negócios",
+  "ng.hero.subtitle": "Transforme seu espaço comercial em uma experiência digital moderna e imersiva.",
+  "ng.hero.cta": "Solicitar orçamento",
+
+  "ng.benefits.badge": "Benefícios",
+  "ng.benefits.title": "Por que utilizar tours virtuais no seu negócio?",
+  "ng.b.1.title": "Mais autoridade para sua marca",
+  "ng.b.1.desc": "Uma apresentação profissional fortalece a percepção da sua empresa.",
+  "ng.b.2.title": "Experiência imersiva",
+  "ng.b.2.desc": "Permita que clientes conheçam o ambiente antes mesmo da visita presencial.",
+  "ng.b.3.title": "Mais confiança",
+  "ng.b.3.desc": "Mostrar o espaço de forma transparente aumenta a confiança dos clientes.",
+  "ng.b.4.title": "Diferenciação visual",
+  "ng.b.4.desc": "Destaque seu negócio com uma apresentação moderna e tecnológica.",
+  "ng.b.5.title": "Presença digital premium",
+  "ng.b.5.desc": "Valorize sua marca com uma experiência visual mais sofisticada.",
+  "ng.b.6.title": "Compatível com todos os dispositivos",
+  "ng.b.6.desc": "Funciona perfeitamente em celulares, tablets e computadores.",
+
+  "ng.segments.badge": "Segmentos",
+  "ng.segments.title": "Soluções para diferentes tipos de negócios",
+  "ng.s.1.title": "Restaurantes",
+  "ng.s.1.desc": "Apresente o ambiente, decoração e experiência do restaurante de forma imersiva.",
+  "ng.s.2.title": "Cafés",
+  "ng.s.2.desc": "Mostre a atmosfera e o espaço do café para atrair novos clientes.",
+  "ng.s.3.title": "Beach Clubs",
+  "ng.s.3.desc": "Valorize o ambiente e a experiência visual do espaço para fortalecer sua marca.",
+  "ng.s.4.title": "Academias",
+  "ng.s.4.desc": "Apresente estrutura, equipamentos e ambiente de forma moderna e profissional.",
+  "ng.s.5.title": "Hotéis e pousadas",
+  "ng.s.5.desc": "Permita que hóspedes explorem os ambientes antes da reserva.",
+  "ng.s.6.title": "Lojas e showrooms",
+  "ng.s.6.desc": "Mostre o espaço da marca com uma apresentação premium e interativa.",
+
+  "ng.gsv.badge": "Google Street View",
+  "ng.gsv.title": "Google Street View para negócios",
+  "ng.gsv.subtitle": "Integre seu espaço ao Google Maps com uma experiência imersiva e profissional.",
+  "ng.gsv.1.title": "Integração com Google Maps",
+  "ng.gsv.1.desc": "Seu negócio pode ser explorado diretamente pelo Google Maps.",
+  "ng.gsv.2.title": "Mais visibilidade online",
+  "ng.gsv.2.desc": "Fortaleça sua presença digital e aumente a percepção profissional da marca.",
+  "ng.gsv.3.title": "Experiência interativa",
+  "ng.gsv.3.desc": "Clientes conseguem navegar virtualmente pelo ambiente do seu negócio.",
+  "ng.gsv.4.title": "Apresentação moderna",
+  "ng.gsv.4.desc": "Destaque sua empresa com tecnologia visual profissional.",
+
+  "ng.cta.title": "Vamos transformar seu espaço em uma experiência digital?",
+  "ng.cta.subtitle": "Entre em contato e solicite um orçamento para seu negócio.",
+  "ng.cta.whatsapp": "Falar no WhatsApp",
+  "ng.cta.quote": "Solicitar orçamento",
+};
+
+const esExtras: Record<string, string> = {
+  "nav.imoveis": "Inmuebles",
+  "nav.negocios": "Negocios",
+
+  "home.seg.badge": "Soluciones",
+  "home.seg.title": "Para cada espacio, una experiencia inmersiva",
+  "home.seg.card1.title": "Para su inmueble",
+  "home.seg.card1.desc": "Tours virtuales y presentaciones inmersivas para inmuebles, arquitectura, interiores y mercado inmobiliario.",
+  "home.seg.card1.cta": "Explorar inmuebles",
+  "home.seg.card2.title": "Para su negocio",
+  "home.seg.card2.desc": "Experiencias digitales para restaurantes, hoteles, tiendas, beach clubs, gimnasios y negocios físicos.",
+  "home.seg.card2.cta": "Explorar negocios",
+
+  "im.hero.badge": "Inmuebles",
+  "im.hero.title": "Tours Virtuales 360° para Inmuebles",
+  "im.hero.subtitle": "Presente inmuebles de forma sofisticada, moderna e inmersiva con tours virtuales profesionales.",
+  "im.hero.cta": "Solicitar presupuesto",
+
+  "im.benefits.badge": "Beneficios",
+  "im.benefits.title": "¿Por qué utilizar tours virtuales en inmuebles?",
+  "im.b.1.title": "Mayor percepción de valor",
+  "im.b.1.desc": "Una presentación inmersiva transmite más sofisticación y valor al inmueble.",
+  "im.b.2.title": "Destaque en los anuncios",
+  "im.b.2.desc": "Los tours virtuales hacen que el inmueble sea más atractivo y diferenciado en plataformas y redes sociales.",
+  "im.b.3.title": "Menos visitas improductivas",
+  "im.b.3.desc": "Los interesados pueden conocer mejor el inmueble antes de la visita presencial.",
+  "im.b.4.title": "Presentación profesional",
+  "im.b.4.desc": "Una experiencia moderna transmite más profesionalismo y credibilidad.",
+  "im.b.5.title": "Disponible 24 horas",
+  "im.b.5.desc": "El inmueble puede visitarse virtualmente en cualquier momento y desde cualquier lugar.",
+  "im.b.6.title": "Compatible con todos los dispositivos",
+  "im.b.6.desc": "Funciona perfectamente en celulares, tablets y computadores.",
+
+  "im.segments.badge": "Segmentos",
+  "im.segments.title": "Soluciones para diferentes segmentos del mercado inmobiliario",
+  "im.s.1.title": "Inmobiliarias",
+  "im.s.1.desc": "Presente inmuebles con mayor calidad visual y destaque sus anuncios de la competencia.",
+  "im.s.2.title": "Corredores",
+  "im.s.2.desc": "Ofrezca una experiencia más profesional y facilite la presentación de los inmuebles para los clientes.",
+  "im.s.3.title": "Airbnb y alquiler vacacional",
+  "im.s.3.desc": "Muestre los ambientes de forma completa y aumente la confianza de los huéspedes antes de la reserva.",
+  "im.s.4.title": "Arquitectura e interiores",
+  "im.s.4.desc": "Valorice proyectos arquitectónicos con una presentación inmersiva y sofisticada.",
+  "im.s.5.title": "Constructoras",
+  "im.s.5.desc": "Presente desarrollos de forma moderna y profesional para potenciales compradores.",
+
+  "im.cta.title": "¿Presentamos su inmueble de forma profesional?",
+  "im.cta.subtitle": "Contáctenos y solicite un presupuesto para su tour virtual.",
+  "im.cta.whatsapp": "Hablar por WhatsApp",
+  "im.cta.quote": "Solicitar presupuesto",
+
+  "ng.hero.badge": "Negocios",
+  "ng.hero.title": "Tours Virtuales para Negocios",
+  "ng.hero.subtitle": "Transforme su espacio comercial en una experiencia digital moderna e inmersiva.",
+  "ng.hero.cta": "Solicitar presupuesto",
+
+  "ng.benefits.badge": "Beneficios",
+  "ng.benefits.title": "¿Por qué utilizar tours virtuales en su negocio?",
+  "ng.b.1.title": "Más autoridad para su marca",
+  "ng.b.1.desc": "Una presentación profesional fortalece la percepción de su empresa.",
+  "ng.b.2.title": "Experiencia inmersiva",
+  "ng.b.2.desc": "Permita que los clientes conozcan el ambiente antes incluso de la visita presencial.",
+  "ng.b.3.title": "Más confianza",
+  "ng.b.3.desc": "Mostrar el espacio de forma transparente aumenta la confianza de los clientes.",
+  "ng.b.4.title": "Diferenciación visual",
+  "ng.b.4.desc": "Destaque su negocio con una presentación moderna y tecnológica.",
+  "ng.b.5.title": "Presencia digital premium",
+  "ng.b.5.desc": "Valorice su marca con una experiencia visual más sofisticada.",
+  "ng.b.6.title": "Compatible con todos los dispositivos",
+  "ng.b.6.desc": "Funciona perfectamente en celulares, tablets y computadores.",
+
+  "ng.segments.badge": "Segmentos",
+  "ng.segments.title": "Soluciones para diferentes tipos de negocios",
+  "ng.s.1.title": "Restaurantes",
+  "ng.s.1.desc": "Presente el ambiente, la decoración y la experiencia del restaurante de forma inmersiva.",
+  "ng.s.2.title": "Cafés",
+  "ng.s.2.desc": "Muestre la atmósfera y el espacio del café para atraer nuevos clientes.",
+  "ng.s.3.title": "Beach Clubs",
+  "ng.s.3.desc": "Valorice el ambiente y la experiencia visual del espacio para fortalecer su marca.",
+  "ng.s.4.title": "Gimnasios",
+  "ng.s.4.desc": "Presente estructura, equipos y ambiente de forma moderna y profesional.",
+  "ng.s.5.title": "Hoteles y posadas",
+  "ng.s.5.desc": "Permita que los huéspedes exploren los ambientes antes de la reserva.",
+  "ng.s.6.title": "Tiendas y showrooms",
+  "ng.s.6.desc": "Muestre el espacio de la marca con una presentación premium e interactiva.",
+
+  "ng.gsv.badge": "Google Street View",
+  "ng.gsv.title": "Google Street View para negocios",
+  "ng.gsv.subtitle": "Integre su espacio a Google Maps con una experiencia inmersiva y profesional.",
+  "ng.gsv.1.title": "Integración con Google Maps",
+  "ng.gsv.1.desc": "Su negocio puede ser explorado directamente desde Google Maps.",
+  "ng.gsv.2.title": "Mayor visibilidad online",
+  "ng.gsv.2.desc": "Fortalezca su presencia digital y aumente la percepción profesional de la marca.",
+  "ng.gsv.3.title": "Experiencia interactiva",
+  "ng.gsv.3.desc": "Los clientes pueden navegar virtualmente por el ambiente de su negocio.",
+  "ng.gsv.4.title": "Presentación moderna",
+  "ng.gsv.4.desc": "Destaque su empresa con tecnología visual profesional.",
+
+  "ng.cta.title": "¿Transformamos su espacio en una experiencia digital?",
+  "ng.cta.subtitle": "Contáctenos y solicite un presupuesto para su negocio.",
+  "ng.cta.whatsapp": "Hablar por WhatsApp",
+  "ng.cta.quote": "Solicitar presupuesto",
+};
+
+const enExtras: Record<string, string> = {
+  "nav.imoveis": "Properties",
+  "nav.negocios": "Business",
+
+  "home.seg.badge": "Solutions",
+  "home.seg.title": "For every space, an immersive experience",
+  "home.seg.card1.title": "For your property",
+  "home.seg.card1.desc": "Virtual tours and immersive presentations for properties, architecture, interiors and real estate.",
+  "home.seg.card1.cta": "Explore properties",
+  "home.seg.card2.title": "For your business",
+  "home.seg.card2.desc": "Digital experiences for restaurants, hotels, shops, beach clubs, gyms and physical businesses.",
+  "home.seg.card2.cta": "Explore business",
+
+  "im.hero.badge": "Properties",
+  "im.hero.title": "360° Virtual Tours for Properties",
+  "im.hero.subtitle": "Present properties in a sophisticated, modern and immersive way with professional virtual tours.",
+  "im.hero.cta": "Request a quote",
+
+  "im.benefits.badge": "Benefits",
+  "im.benefits.title": "Why use virtual tours for properties?",
+  "im.b.1.title": "Higher perceived value",
+  "im.b.1.desc": "An immersive presentation conveys more sophistication and value to the property.",
+  "im.b.2.title": "Stand out in listings",
+  "im.b.2.desc": "Virtual tours make the property more attractive and differentiated on platforms and social media.",
+  "im.b.3.title": "Fewer unproductive visits",
+  "im.b.3.desc": "Interested parties can get to know the property better before the in-person visit.",
+  "im.b.4.title": "Professional presentation",
+  "im.b.4.desc": "A modern experience conveys more professionalism and credibility.",
+  "im.b.5.title": "Available 24/7",
+  "im.b.5.desc": "The property can be virtually visited anytime, from anywhere.",
+  "im.b.6.title": "Compatible with all devices",
+  "im.b.6.desc": "Works perfectly on smartphones, tablets and computers.",
+
+  "im.segments.badge": "Segments",
+  "im.segments.title": "Solutions for different real estate segments",
+  "im.s.1.title": "Real estate agencies",
+  "im.s.1.desc": "Present properties with higher visual quality and stand out from the competition.",
+  "im.s.2.title": "Brokers",
+  "im.s.2.desc": "Offer a more professional experience and make property presentations easier for clients.",
+  "im.s.3.title": "Airbnb & short-term rentals",
+  "im.s.3.desc": "Showcase spaces fully and build guest confidence before the booking.",
+  "im.s.4.title": "Architecture & interiors",
+  "im.s.4.desc": "Enhance architectural projects with an immersive and sophisticated presentation.",
+  "im.s.5.title": "Developers",
+  "im.s.5.desc": "Present developments in a modern and professional way for potential buyers.",
+
+  "im.cta.title": "Shall we present your property professionally?",
+  "im.cta.subtitle": "Get in touch and request a quote for your virtual tour.",
+  "im.cta.whatsapp": "Chat on WhatsApp",
+  "im.cta.quote": "Request a quote",
+
+  "ng.hero.badge": "Business",
+  "ng.hero.title": "Virtual Tours for Business",
+  "ng.hero.subtitle": "Transform your commercial space into a modern and immersive digital experience.",
+  "ng.hero.cta": "Request a quote",
+
+  "ng.benefits.badge": "Benefits",
+  "ng.benefits.title": "Why use virtual tours for your business?",
+  "ng.b.1.title": "More authority for your brand",
+  "ng.b.1.desc": "A professional presentation strengthens the perception of your company.",
+  "ng.b.2.title": "Immersive experience",
+  "ng.b.2.desc": "Let clients explore the space even before visiting in person.",
+  "ng.b.3.title": "More trust",
+  "ng.b.3.desc": "Showing the space transparently increases client trust.",
+  "ng.b.4.title": "Visual differentiation",
+  "ng.b.4.desc": "Stand out with a modern and technological presentation.",
+  "ng.b.5.title": "Premium digital presence",
+  "ng.b.5.desc": "Elevate your brand with a more sophisticated visual experience.",
+  "ng.b.6.title": "Compatible with all devices",
+  "ng.b.6.desc": "Works perfectly on smartphones, tablets and computers.",
+
+  "ng.segments.badge": "Segments",
+  "ng.segments.title": "Solutions for different types of businesses",
+  "ng.s.1.title": "Restaurants",
+  "ng.s.1.desc": "Showcase the ambiance, décor and experience of the restaurant in an immersive way.",
+  "ng.s.2.title": "Cafés",
+  "ng.s.2.desc": "Show the atmosphere and space of the café to attract new customers.",
+  "ng.s.3.title": "Beach Clubs",
+  "ng.s.3.desc": "Enhance the ambiance and visual experience of the venue to strengthen your brand.",
+  "ng.s.4.title": "Gyms",
+  "ng.s.4.desc": "Present the layout, equipment and atmosphere in a modern and professional way.",
+  "ng.s.5.title": "Hotels & inns",
+  "ng.s.5.desc": "Let guests explore the spaces before booking.",
+  "ng.s.6.title": "Shops & showrooms",
+  "ng.s.6.desc": "Showcase your brand's space with a premium and interactive presentation.",
+
+  "ng.gsv.badge": "Google Street View",
+  "ng.gsv.title": "Google Street View for business",
+  "ng.gsv.subtitle": "Integrate your space with Google Maps through an immersive and professional experience.",
+  "ng.gsv.1.title": "Google Maps integration",
+  "ng.gsv.1.desc": "Your business can be explored directly through Google Maps.",
+  "ng.gsv.2.title": "More online visibility",
+  "ng.gsv.2.desc": "Strengthen your digital presence and elevate brand perception.",
+  "ng.gsv.3.title": "Interactive experience",
+  "ng.gsv.3.desc": "Clients can virtually navigate through your business space.",
+  "ng.gsv.4.title": "Modern presentation",
+  "ng.gsv.4.desc": "Stand out with professional visual technology.",
+
+  "ng.cta.title": "Shall we turn your space into a digital experience?",
+  "ng.cta.subtitle": "Get in touch and request a quote for your business.",
+  "ng.cta.whatsapp": "Chat on WhatsApp",
+  "ng.cta.quote": "Request a quote",
+};
+
+const baseTranslations: Record<Language, Record<string, string>> = {
   pt: {
     // Header Nav
     "nav.benefits": "Benefícios",
@@ -79,7 +394,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "pricing.include.6": "Integração com site disponível",
     "pricing.include.7": "Integração com Google Street View disponível",
 
-    // FAQ (8 questions)
+    // FAQ
     "faq.badge": "Dúvidas",
     "faq.title": "Perguntas Frequentes",
     "faq.1.q": "O que é um tour virtual 360°?",
@@ -141,7 +456,6 @@ export const translations: Record<Language, Record<string, string>> = {
   },
 
   es: {
-    // Header Nav
     "nav.benefits": "Beneficios",
     "nav.howItWorks": "Cómo Funciona",
     "nav.portfolio": "Portafolio",
@@ -149,7 +463,6 @@ export const translations: Record<Language, Record<string, string>> = {
     "nav.faq": "FAQ",
     "nav.cta": "Hablar por WhatsApp",
 
-    // Hero
     "hero.badge": "Tour Virtual 360° para Inmuebles y Comercios",
     "hero.title.part1": "Presente Su Espacio de Forma ",
     "hero.title.highlight": "Profesional e Inmersiva",
@@ -158,7 +471,6 @@ export const translations: Record<Language, Record<string, string>> = {
     "hero.cta.secondary": "Ver Ejemplos",
     "hero.cta.tour": "Ver Tour Completo",
 
-    // Benefits
     "benefits.badge": "Beneficios",
     "benefits.title": "¿Por Qué Usar un Tour Virtual 360°?",
     "benefits.subtitle": "Conozca las ventajas de presentar inmuebles y comercios con tecnología 360°.",
@@ -175,7 +487,6 @@ export const translations: Record<Language, Record<string, string>> = {
     "benefits.6.title": "Compatibilidad Total",
     "benefits.6.desc": "Funciona en celulares, tablets y computadores, sin necesidad de instalar aplicaciones.",
 
-    // Process
     "process.badge": "Proceso",
     "process.title": "Cómo Funciona el Proceso",
     "process.subtitle": "Conozca las etapas para obtener su tour virtual 360°.",
@@ -192,7 +503,6 @@ export const translations: Record<Language, Record<string, string>> = {
     "process.5.desc": "Entrega del enlace listo para divulgación.",
     "process.footer": "Todo el proceso está pensado para ser simple, rápido y eficiente para el cliente.",
 
-    // Portfolio
     "portfolio.badge": "Nuestro Trabajo",
     "portfolio.title": "Portafolio de Tours Virtuales",
     "portfolio.subtitle": "Vea algunos de nuestros trabajos en inmuebles y comercios y la calidad que entregamos en cada proyecto.",
@@ -205,7 +515,6 @@ export const translations: Record<Language, Record<string, string>> = {
     "portfolio.viewTour": "Ver Tour 360°",
     "portfolio.cta": "Solicitar Tour Para Su Inmueble",
 
-    // Pricing (simplified)
     "pricing.badge": "Servicio",
     "pricing.title": "Tour Virtual 360°",
     "pricing.subtitle": "Una forma profesional e inmersiva de presentar inmuebles y comercios online.",
@@ -218,7 +527,6 @@ export const translations: Record<Language, Record<string, string>> = {
     "pricing.include.6": "Integración con sitio web disponible",
     "pricing.include.7": "Integración con Google Street View disponible",
 
-    // FAQ (8 questions)
     "faq.badge": "Dudas",
     "faq.title": "Preguntas Frecuentes",
     "faq.1.q": "¿Qué es un tour virtual 360°?",
@@ -242,7 +550,6 @@ export const translations: Record<Language, Record<string, string>> = {
     "faq.10.q": "¿El tour puede integrarse a Google Street View?",
     "faq.10.a": "Sí. Podemos integrar el tour virtual a Google Street View, permitiendo que los clientes encuentren y exploren el espacio directamente por Google.",
 
-    // Differentials
     "diff.badge": "Diferenciales",
     "diff.title": "Nuestro Compromiso",
     "diff.subtitle": "Calidad, organización y profesionalismo en cada proyecto.",
@@ -253,7 +560,6 @@ export const translations: Record<Language, Record<string, string>> = {
     "diff.3.title": "Presentación Profesional",
     "diff.3.desc": "Nuestro objetivo es ofrecer una presentación profesional que eleve la percepción de valor del inmueble.",
 
-    // Contact Section
     "nav.contact": "Contacto",
     "contact.badge": "Contacto internacional",
     "contact.title": "Hable con nuestro equipo",
@@ -262,14 +568,12 @@ export const translations: Record<Language, Record<string, string>> = {
     "contact.uk": "Reino Unido — Londres",
     "contact.availability": "Disponible vía WhatsApp & SMS",
 
-    // CTA
     "cta.badge": "Contáctenos",
     "cta.title": "Agendar mi Tour Virtual",
     "cta.subtitle": "Contáctenos para saber más sobre nuestros servicios de tour virtual 360° y recibir un presupuesto personalizado para su proyecto.",
     "cta.whatsapp": "WhatsApp",
     "cta.email": "Enviar E-mail",
 
-    // Footer
     "footer.brand": "Visitar Studio",
     "footer.desc": "Especialistas en tours virtuales y fotografías 360° para inmuebles y comercios. Transforme la presentación de su espacio.",
     "footer.nav": "Navegación",
@@ -280,7 +584,6 @@ export const translations: Record<Language, Record<string, string>> = {
   },
 
   en: {
-    // Header Nav
     "nav.benefits": "Benefits",
     "nav.howItWorks": "How It Works",
     "nav.portfolio": "Portfolio",
@@ -288,7 +591,6 @@ export const translations: Record<Language, Record<string, string>> = {
     "nav.faq": "FAQ",
     "nav.cta": "Chat on WhatsApp",
 
-    // Hero
     "hero.badge": "360° Virtual Tour for Properties & Commercial Spaces",
     "hero.title.part1": "Present Your Space in a ",
     "hero.title.highlight": "Professional and Immersive Way",
@@ -297,7 +599,6 @@ export const translations: Record<Language, Record<string, string>> = {
     "hero.cta.secondary": "View Examples",
     "hero.cta.tour": "View Full Tour",
 
-    // Benefits
     "benefits.badge": "Benefits",
     "benefits.title": "Why Use a 360° Virtual Tour?",
     "benefits.subtitle": "Discover the advantages of presenting properties and commercial spaces with 360° technology.",
@@ -314,7 +615,6 @@ export const translations: Record<Language, Record<string, string>> = {
     "benefits.6.title": "Full Compatibility",
     "benefits.6.desc": "Works on smartphones, tablets, and computers, with no need to install applications.",
 
-    // Process
     "process.badge": "Process",
     "process.title": "How the Process Works",
     "process.subtitle": "Learn the steps to get your 360° virtual tour.",
@@ -331,7 +631,6 @@ export const translations: Record<Language, Record<string, string>> = {
     "process.5.desc": "Delivery of the ready-to-share link.",
     "process.footer": "The entire process is designed to be simple, fast, and efficient for the client.",
 
-    // Portfolio
     "portfolio.badge": "Our Work",
     "portfolio.title": "Virtual Tours Portfolio",
     "portfolio.subtitle": "Check out some of our work in properties and commercial spaces and the quality we deliver in every project.",
@@ -344,7 +643,6 @@ export const translations: Record<Language, Record<string, string>> = {
     "portfolio.viewTour": "View 360° Tour",
     "portfolio.cta": "Request a Tour for Your Property",
 
-    // Pricing (simplified)
     "pricing.badge": "Service",
     "pricing.title": "360° Virtual Tour",
     "pricing.subtitle": "A professional and immersive way to present properties and commercial spaces online.",
@@ -357,7 +655,6 @@ export const translations: Record<Language, Record<string, string>> = {
     "pricing.include.6": "Website integration available",
     "pricing.include.7": "Google Street View integration available",
 
-    // FAQ (8 questions)
     "faq.badge": "Questions",
     "faq.title": "Frequently Asked Questions",
     "faq.1.q": "What is a 360° virtual tour?",
@@ -381,7 +678,6 @@ export const translations: Record<Language, Record<string, string>> = {
     "faq.10.q": "Can the tour be integrated with Google Street View?",
     "faq.10.a": "Yes. We can integrate the virtual tour with Google Street View, allowing clients to find and explore the space directly through Google.",
 
-    // Differentials
     "diff.badge": "Differentials",
     "diff.title": "Our Commitment",
     "diff.subtitle": "Quality, organization, and professionalism in every project.",
@@ -392,7 +688,6 @@ export const translations: Record<Language, Record<string, string>> = {
     "diff.3.title": "Professional Presentation",
     "diff.3.desc": "Our goal is to offer a professional presentation that elevates the perceived value of the property.",
 
-    // Contact Section
     "nav.contact": "Contact",
     "contact.badge": "International contact",
     "contact.title": "Speak with our team",
@@ -401,14 +696,12 @@ export const translations: Record<Language, Record<string, string>> = {
     "contact.uk": "UK — London",
     "contact.availability": "Available via WhatsApp & SMS",
 
-    // CTA
     "cta.badge": "Get in Touch",
     "cta.title": "Schedule My Virtual Tour",
     "cta.subtitle": "Get in touch to learn more about our 360° virtual tour services and receive a personalized quote for your project.",
     "cta.whatsapp": "WhatsApp",
     "cta.email": "Send E-mail",
 
-    // Footer
     "footer.brand": "Visitar Studio",
     "footer.desc": "Specialists in virtual tours and 360° photography for properties and commercial spaces. Transform the presentation of your space.",
     "footer.nav": "Navigation",
@@ -417,4 +710,10 @@ export const translations: Record<Language, Record<string, string>> = {
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms of Use",
   },
+};
+
+export const translations: Record<Language, Record<string, string>> = {
+  pt: { ...baseTranslations.pt, ...ptExtras },
+  es: { ...baseTranslations.es, ...esExtras },
+  en: { ...baseTranslations.en, ...enExtras },
 };

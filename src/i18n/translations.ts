@@ -260,6 +260,8 @@ const enExtras: Record<string, string> = {
   "im.s.4.desc": "Enhance architectural projects with an immersive and sophisticated presentation.",
   "im.s.5.title": "Developers",
   "im.s.5.desc": "Present developments in a modern and professional way for potential buyers.",
+  "im.s.6.title": "Interiors & decor",
+  "im.s.6.desc": "Showcase projects and spaces with a more sophisticated and immersive visual experience.",
 
   "im.cta.title": "Shall we present your property professionally?",
   "im.cta.subtitle": "Get in touch and request a quote for your virtual tour.",

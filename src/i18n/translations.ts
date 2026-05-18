@@ -154,6 +154,8 @@ const esExtras: Record<string, string> = {
   "im.s.4.desc": "Valorice proyectos arquitectónicos con una presentación inmersiva y sofisticada.",
   "im.s.5.title": "Constructoras",
   "im.s.5.desc": "Presente desarrollos de forma moderna y profesional para potenciales compradores.",
+  "im.s.6.title": "Interiores y decoración",
+  "im.s.6.desc": "Presente proyectos y ambientes con una experiencia visual más sofisticada e inmersiva.",
 
   "im.cta.title": "¿Presentamos su inmueble de forma profesional?",
   "im.cta.subtitle": "Contáctenos y solicite un presupuesto para su tour virtual.",

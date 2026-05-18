@@ -26,19 +26,18 @@ const Header = () => {
       { href: "/", label: t("nav.home"), type: "route" },
       { href: "/negocios", label: t("nav.negocios"), type: "route" },
       { href: "#benefits", label: t("nav.benefits"), type: "anchor" },
-      { href: "#segments", label: t("nav.segments"), type: "anchor" },
       { href: "#portfolio", label: t("nav.portfolio"), type: "anchor" },
-      { href: "/#contact", label: t("nav.contact"), type: "anchor" },
+      { href: "#segments", label: t("nav.segments"), type: "anchor" },
+      { href: "#contact", label: t("nav.contact"), type: "anchor" },
     ];
   } else if (pathname.startsWith("/negocios")) {
     navLinks = [
       { href: "/", label: t("nav.home"), type: "route" },
       { href: "/imoveis", label: t("nav.imoveis"), type: "route" },
       { href: "#benefits", label: t("nav.benefits"), type: "anchor" },
-      { href: "#segments", label: t("nav.segments"), type: "anchor" },
-      { href: "#gsv", label: t("nav.gsv"), type: "anchor" },
       { href: "#portfolio", label: t("nav.portfolio"), type: "anchor" },
-      { href: "/#contact", label: t("nav.contact"), type: "anchor" },
+      { href: "#segments", label: t("nav.segments"), type: "anchor" },
+      { href: "#contact", label: t("nav.contact"), type: "anchor" },
     ];
   } else {
     navLinks = [

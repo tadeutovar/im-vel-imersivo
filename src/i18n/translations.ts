@@ -701,6 +701,9 @@ const baseTranslations: Record<Language, Record<string, string>> = {
     "diff.3.desc": "Our goal is to offer a professional presentation that elevates the perceived value of the property.",
 
     "nav.contact": "Contact",
+    "nav.home": "Home",
+    "nav.segments": "Segments",
+    "nav.gsv": "Google Street View",
     "contact.badge": "International contact",
     "contact.title": "Speak with our team",
     "contact.brazil": "Brazil — Rio de Janeiro",

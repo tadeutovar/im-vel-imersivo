@@ -28,7 +28,7 @@ const Header = () => {
       { href: "#benefits", label: t("nav.benefits"), type: "anchor" },
       { href: "#segments", label: t("nav.segments"), type: "anchor" },
       { href: "#portfolio", label: t("nav.portfolio"), type: "anchor" },
-      { href: "#contact", label: t("nav.contact"), type: "anchor" },
+      { href: "/#contact", label: t("nav.contact"), type: "anchor" },
     ];
   } else if (pathname.startsWith("/negocios")) {
     navLinks = [

@@ -13,7 +13,7 @@ const FAQSection = () => {
   const faqKeys = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   return (
-    <section id="faq" className="py-28 md:py-36 bg-section-alt">
+    <section id="faq" className="py-28 md:py-36 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 16 }}

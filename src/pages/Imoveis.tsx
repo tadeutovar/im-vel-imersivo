@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Building2, Star, Eye, Award, Clock, Smartphone, Home, Briefcase, Users, Layout, Building, MessageCircle, Sofa } from "lucide-react";
+import { ArrowRight, Building2, Star, Eye, Award, Clock, Smartphone, Home, Briefcase, Users, Layout, Building, Sofa } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PortfolioSection from "@/components/PortfolioSection";
+import ContactSection from "@/components/ContactSection";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Imoveis = () => {

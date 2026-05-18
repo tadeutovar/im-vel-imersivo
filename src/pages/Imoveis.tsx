@@ -168,7 +168,7 @@ const Imoveis = () => {
         </section>
 
         <ContactSection variant="default" />
-
+      </main>
       <Footer />
     </div>
   );

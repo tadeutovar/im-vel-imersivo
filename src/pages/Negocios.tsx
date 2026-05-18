@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Award, Eye, Shield, Sparkles, Globe, Smartphone, Utensils, Coffee, Sun, Dumbbell, Hotel, Store, MapPin, TrendingUp, MousePointerClick, Layers, MessageCircle } from "lucide-react";
+import { ArrowRight, Award, Eye, Shield, Sparkles, Globe, Smartphone, Utensils, Coffee, Sun, Dumbbell, Hotel, Store, MapPin, TrendingUp, MousePointerClick, Layers } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PortfolioSection from "@/components/PortfolioSection";
+import ContactSection from "@/components/ContactSection";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Negocios = () => {

@@ -132,7 +132,7 @@ const Negocios = () => {
         </section>
 
         {/* Segments */}
-        <section className="py-28 md:py-36 bg-background">
+        <section id="segments" className="py-28 md:py-36 bg-background">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 16 }}

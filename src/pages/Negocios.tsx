@@ -92,7 +92,7 @@ const Negocios = () => {
         </section>
 
         {/* Benefits */}
-        <section className="py-28 md:py-36 bg-section-alt">
+        <section id="benefits" className="py-28 md:py-36 bg-section-alt">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -132,7 +132,7 @@ const Negocios = () => {
         </section>
 
         {/* Segments */}
-        <section className="py-28 md:py-36 bg-background">
+        <section id="segments" className="py-28 md:py-36 bg-background">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -172,7 +172,7 @@ const Negocios = () => {
         </section>
 
         {/* Google Street View */}
-        <section className="py-28 md:py-36 bg-section-alt">
+        <section id="gsv" className="py-28 md:py-36 bg-section-alt">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -214,10 +214,10 @@ const Negocios = () => {
           </div>
         </section>
 
-        <PortfolioSection />
+        <PortfolioSection variant="default" />
 
         {/* Final CTA */}
-        <section className="py-28 md:py-36 bg-background">
+        <section className="py-28 md:py-36 bg-section-alt">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 16 }}

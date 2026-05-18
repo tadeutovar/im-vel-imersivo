@@ -17,7 +17,7 @@ const PricingSection = () => {
   ];
 
   return (
-    <section id="precos" className="py-28 md:py-36 bg-background">
+    <section id="precos" className="py-28 md:py-36 bg-section-alt">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center">
           <motion.div

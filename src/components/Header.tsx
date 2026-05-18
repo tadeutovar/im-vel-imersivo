@@ -2,26 +2,55 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/visitarstudio-logo-removebg.png";
 import LanguageSelector from "@/components/LanguageSelector";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+type NavLink = {
+  href: string;
+  label: string;
+  type: "route" | "anchor";
+};
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, language } = useLanguage();
+  const { pathname } = useLocation();
   const phone = language === "pt" ? "+5521973596255" : "+447590124405";
   const waLink = `https://wa.me/${phone.replace(/\+/g, "")}`;
 
-  const navLinks = [
-    { href: "/imoveis", label: t("nav.imoveis"), type: "route" as const },
-    { href: "/negocios", label: t("nav.negocios"), type: "route" as const },
-    { href: "/#precos", label: t("nav.pricing"), type: "anchor" as const },
-    { href: "/#faq", label: t("nav.faq"), type: "anchor" as const },
-    { href: "/#contact", label: t("nav.contact"), type: "anchor" as const },
-  ];
+  let navLinks: NavLink[];
+  if (pathname.startsWith("/imoveis")) {
+    navLinks = [
+      { href: "/", label: t("nav.home"), type: "route" },
+      { href: "/negocios", label: t("nav.negocios"), type: "route" },
+      { href: "#benefits", label: t("nav.benefits"), type: "anchor" },
+      { href: "#segments", label: t("nav.segments"), type: "anchor" },
+      { href: "#portfolio", label: t("nav.portfolio"), type: "anchor" },
+      { href: "/#contact", label: t("nav.contact"), type: "anchor" },
+    ];
+  } else if (pathname.startsWith("/negocios")) {
+    navLinks = [
+      { href: "/", label: t("nav.home"), type: "route" },
+      { href: "/imoveis", label: t("nav.imoveis"), type: "route" },
+      { href: "#benefits", label: t("nav.benefits"), type: "anchor" },
+      { href: "#segments", label: t("nav.segments"), type: "anchor" },
+      { href: "#gsv", label: t("nav.gsv"), type: "anchor" },
+      { href: "#portfolio", label: t("nav.portfolio"), type: "anchor" },
+      { href: "/#contact", label: t("nav.contact"), type: "anchor" },
+    ];
+  } else {
+    navLinks = [
+      { href: "/imoveis", label: t("nav.imoveis"), type: "route" },
+      { href: "/negocios", label: t("nav.negocios"), type: "route" },
+      { href: "/#precos", label: t("nav.pricing"), type: "anchor" },
+      { href: "/#faq", label: t("nav.faq"), type: "anchor" },
+      { href: "/#contact", label: t("nav.contact"), type: "anchor" },
+    ];
+  }
 
-  const renderLink = (link: typeof navLinks[number], onClick?: () => void) => {
+  const renderLink = (link: NavLink, onClick?: () => void) => {
     const className =
       "text-muted-foreground hover:text-foreground transition-colors text-sm tracking-wide uppercase";
     if (link.type === "route") {

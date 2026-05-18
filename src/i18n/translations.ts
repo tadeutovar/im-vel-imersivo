@@ -47,6 +47,8 @@ const ptExtras: Record<string, string> = {
   "im.s.4.desc": "Valorize projetos arquitetônicos com uma apresentação imersiva e sofisticada.",
   "im.s.5.title": "Construtoras",
   "im.s.5.desc": "Apresente empreendimentos de forma moderna e profissional para potenciais compradores.",
+  "im.s.6.title": "Interiores e decoração",
+  "im.s.6.desc": "Apresente projetos e ambientes com uma experiência visual mais sofisticada e imersiva.",
 
   "im.cta.title": "Vamos apresentar seu imóvel de forma profissional?",
   "im.cta.subtitle": "Entre em contato e solicite um orçamento para seu tour virtual.",
@@ -152,6 +154,8 @@ const esExtras: Record<string, string> = {
   "im.s.4.desc": "Valorice proyectos arquitectónicos con una presentación inmersiva y sofisticada.",
   "im.s.5.title": "Constructoras",
   "im.s.5.desc": "Presente desarrollos de forma moderna y profesional para potenciales compradores.",
+  "im.s.6.title": "Interiores y decoración",
+  "im.s.6.desc": "Presente proyectos y ambientes con una experiencia visual más sofisticada e inmersiva.",
 
   "im.cta.title": "¿Presentamos su inmueble de forma profesional?",
   "im.cta.subtitle": "Contáctenos y solicite un presupuesto para su tour virtual.",
@@ -256,6 +260,8 @@ const enExtras: Record<string, string> = {
   "im.s.4.desc": "Enhance architectural projects with an immersive and sophisticated presentation.",
   "im.s.5.title": "Developers",
   "im.s.5.desc": "Present developments in a modern and professional way for potential buyers.",
+  "im.s.6.title": "Interiors & decor",
+  "im.s.6.desc": "Showcase projects and spaces with a more sophisticated and immersive visual experience.",
 
   "im.cta.title": "Shall we present your property professionally?",
   "im.cta.subtitle": "Get in touch and request a quote for your virtual tour.",
@@ -431,6 +437,9 @@ const baseTranslations: Record<Language, Record<string, string>> = {
 
     // Contact Section
     "nav.contact": "Contato",
+    "nav.home": "Home",
+    "nav.segments": "Segmentos",
+    "nav.gsv": "Google Street View",
     "contact.badge": "Contato internacional",
     "contact.title": "Fale com nossa equipe",
     "contact.brazil": "Brasil — Rio de Janeiro",
@@ -561,6 +570,9 @@ const baseTranslations: Record<Language, Record<string, string>> = {
     "diff.3.desc": "Nuestro objetivo es ofrecer una presentación profesional que eleve la percepción de valor del inmueble.",
 
     "nav.contact": "Contacto",
+    "nav.home": "Inicio",
+    "nav.segments": "Segmentos",
+    "nav.gsv": "Google Street View",
     "contact.badge": "Contacto internacional",
     "contact.title": "Hable con nuestro equipo",
     "contact.brazil": "Brasil — Río de Janeiro",
@@ -689,6 +701,9 @@ const baseTranslations: Record<Language, Record<string, string>> = {
     "diff.3.desc": "Our goal is to offer a professional presentation that elevates the perceived value of the property.",
 
     "nav.contact": "Contact",
+    "nav.home": "Home",
+    "nav.segments": "Segments",
+    "nav.gsv": "Google Street View",
     "contact.badge": "International contact",
     "contact.title": "Speak with our team",
     "contact.brazil": "Brazil — Rio de Janeiro",

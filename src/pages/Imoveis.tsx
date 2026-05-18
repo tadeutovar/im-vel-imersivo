@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Building2, Star, Eye, Award, Clock, Smartphone, Home, Briefcase, Users, Layout, Building, MessageCircle } from "lucide-react";
+import { ArrowRight, Building2, Star, Eye, Award, Clock, Smartphone, Home, Briefcase, Users, Layout, Building, MessageCircle, Sofa } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -27,6 +27,7 @@ const Imoveis = () => {
     { icon: Users, key: 3 },
     { icon: Layout, key: 4 },
     { icon: Building, key: 5 },
+    { icon: Sofa, key: 6 },
   ];
 
   return (
@@ -84,7 +85,7 @@ const Imoveis = () => {
         </section>
 
         {/* Benefits */}
-        <section className="py-28 md:py-36 bg-section-alt">
+        <section id="benefits" className="py-28 md:py-36 bg-section-alt">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -124,7 +125,7 @@ const Imoveis = () => {
         </section>
 
         {/* Segments */}
-        <section className="py-28 md:py-36 bg-background">
+        <section id="segments" className="py-28 md:py-36 bg-background">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 16 }}

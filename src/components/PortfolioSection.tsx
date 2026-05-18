@@ -7,7 +7,7 @@ import portfolio3 from "@/assets/portfolio-praiadabarra2.jpeg";
 import portfolio4 from "@/assets/portfolio-fendi-home.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const PortfolioSection = () => {
+const PortfolioSection = ({ variant = "alt" }: { variant?: "alt" | "default" }) => {
   const { t } = useLanguage();
 
   const projects = [
@@ -43,7 +43,7 @@ const PortfolioSection = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-28 md:py-36 bg-section-alt">
+    <section id="portfolio" className={`py-28 md:py-36 ${variant === "alt" ? "bg-section-alt" : "bg-background"}`}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 16 }}

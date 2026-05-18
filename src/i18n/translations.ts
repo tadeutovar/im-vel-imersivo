@@ -570,6 +570,9 @@ const baseTranslations: Record<Language, Record<string, string>> = {
     "diff.3.desc": "Nuestro objetivo es ofrecer una presentación profesional que eleve la percepción de valor del inmueble.",
 
     "nav.contact": "Contacto",
+    "nav.home": "Inicio",
+    "nav.segments": "Segmentos",
+    "nav.gsv": "Google Street View",
     "contact.badge": "Contacto internacional",
     "contact.title": "Hable con nuestro equipo",
     "contact.brazil": "Brasil — Río de Janeiro",

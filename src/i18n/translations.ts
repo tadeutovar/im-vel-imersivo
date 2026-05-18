@@ -47,6 +47,8 @@ const ptExtras: Record<string, string> = {
   "im.s.4.desc": "Valorize projetos arquitetônicos com uma apresentação imersiva e sofisticada.",
   "im.s.5.title": "Construtoras",
   "im.s.5.desc": "Apresente empreendimentos de forma moderna e profissional para potenciais compradores.",
+  "im.s.6.title": "Interiores e decoração",
+  "im.s.6.desc": "Apresente projetos e ambientes com uma experiência visual mais sofisticada e imersiva.",
 
   "im.cta.title": "Vamos apresentar seu imóvel de forma profissional?",
   "im.cta.subtitle": "Entre em contato e solicite um orçamento para seu tour virtual.",

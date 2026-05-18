@@ -27,6 +27,7 @@ const Imoveis = () => {
     { icon: Users, key: 3 },
     { icon: Layout, key: 4 },
     { icon: Building, key: 5 },
+    { icon: Sofa, key: 6 },
   ];
 
   return (

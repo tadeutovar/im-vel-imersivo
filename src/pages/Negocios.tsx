@@ -218,7 +218,7 @@ const Negocios = () => {
         </section>
 
         <ContactSection variant="alt" />
-
+      </main>
       <Footer />
     </div>
   );

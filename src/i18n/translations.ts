@@ -437,6 +437,9 @@ const baseTranslations: Record<Language, Record<string, string>> = {
 
     // Contact Section
     "nav.contact": "Contato",
+    "nav.home": "Home",
+    "nav.segments": "Segmentos",
+    "nav.gsv": "Google Street View",
     "contact.badge": "Contato internacional",
     "contact.title": "Fale com nossa equipe",
     "contact.brazil": "Brasil — Rio de Janeiro",

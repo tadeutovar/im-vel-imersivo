@@ -85,7 +85,7 @@ const Imoveis = () => {
         </section>
 
         {/* Benefits */}
-        <section className="py-28 md:py-36 bg-section-alt">
+        <section id="benefits" className="py-28 md:py-36 bg-section-alt">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 16 }}

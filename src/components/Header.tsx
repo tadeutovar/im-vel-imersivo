@@ -38,7 +38,7 @@ const Header = () => {
       { href: "#segments", label: t("nav.segments"), type: "anchor" },
       { href: "#gsv", label: t("nav.gsv"), type: "anchor" },
       { href: "#portfolio", label: t("nav.portfolio"), type: "anchor" },
-      { href: "#contact", label: t("nav.contact"), type: "anchor" },
+      { href: "/#contact", label: t("nav.contact"), type: "anchor" },
     ];
   } else {
     navLinks = [

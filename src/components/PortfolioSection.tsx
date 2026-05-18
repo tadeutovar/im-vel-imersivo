@@ -7,7 +7,7 @@ import portfolio3 from "@/assets/portfolio-praiadabarra2.jpeg";
 import portfolio4 from "@/assets/portfolio-fendi-home.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const PortfolioSection = () => {
+const PortfolioSection = ({ variant = "alt" }: { variant?: "alt" | "default" }) => {
   const { t } = useLanguage();
 
   const projects = [

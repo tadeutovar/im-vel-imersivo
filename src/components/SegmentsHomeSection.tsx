@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import portfolioFendi from "@/assets/portfolio-fendi-home.jpeg";
-import portfolioBcn from "@/assets/portfolio-bcn.jpg";
+import portfolioBcn from "@/assets/hero-business.png";
 
 const SegmentsHomeSection = () => {
   const { t } = useLanguage();

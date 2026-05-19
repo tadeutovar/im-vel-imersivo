@@ -6,7 +6,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PortfolioSection from "@/components/PortfolioSection";
 import ContactSection from "@/components/ContactSection";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-business.png";
+import middleBg from "@/assets/middle-section-bsnss.png";
 
 const Negocios = () => {
   const { t, language } = useLanguage();
@@ -132,7 +133,13 @@ const Negocios = () => {
           </div>
         </section>
 
-        <PortfolioSection variant="default" />
+        <section>
+          <div className="relative w-full h-[40vh] md:h-[55vh] overflow-hidden">
+            <img src={middleBg} alt="" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-foreground/10" />
+          </div>
+        </section>      
+        {/* <PortfolioSection variant="default" /> */}
 
         {/* Segments */}
         <section id="segments" className="py-28 md:py-36 bg-section-alt">

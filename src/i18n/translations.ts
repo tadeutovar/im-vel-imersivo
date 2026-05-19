@@ -221,10 +221,10 @@ const enExtras: Record<string, string> = {
 
   "home.seg.badge": "Solutions",
   "home.seg.title": "For every space, an immersive experience",
-  "home.seg.card1.title": "For your property",
+  "home.seg.card1.title": "For Properties",
   "home.seg.card1.desc": "Virtual tours and immersive presentations for properties, architecture, interiors and real estate.",
   "home.seg.card1.cta": "Explore properties",
-  "home.seg.card2.title": "For your business",
+  "home.seg.card2.title": "For Businesses",
   "home.seg.card2.desc": "Digital experiences for restaurants, hotels, shops, beach clubs, gyms and physical businesses.",
   "home.seg.card2.cta": "Explore business",
 

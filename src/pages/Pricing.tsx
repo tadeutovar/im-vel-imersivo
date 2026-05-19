@@ -4,101 +4,112 @@ import { Check } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 type Region = "BR" | "EU";
 
 const pricing = {
   BR: {
     residential: { price: "R$ 1.490" },
-    production: { from: "A partir de R$ 99" },
+    production: { price: "R$ 99" },
     plans: {
-      monthly: { price: "R$ 27", period: "/mês" },
-      annualMonthly: { price: "R$ 18", period: "/mês", total: "Total anual equivalente a R$ 216" },
-      annual: { price: "R$ 199", period: "/ano", equivalent: "Equivalente a R$ 16,58/mês" },
+      monthly: { price: "R$ 27" },
+      annualMonthly: { price: "R$ 18", total: "R$ 216" },
+      annual: { price: "R$ 199", equivalent: "R$ 16,58" },
     },
   },
   EU: {
     residential: { price: "490 €" },
-    production: { from: "A partir de 99 €" },
+    production: { price: "99 €" },
     plans: {
-      monthly: { price: "27 €", period: "/mês" },
-      annualMonthly: { price: "18 €", period: "/mês", total: "Total anual equivalente a 216 €" },
-      annual: { price: "199 €", period: "/ano", equivalent: "Equivalente a 16,58 €/mês" },
+      monthly: { price: "27 €" },
+      annualMonthly: { price: "18 €", total: "216 €" },
+      annual: { price: "199 €", equivalent: "16,58 €" },
     },
   },
 } as const;
 
 const residentialFeatures = [
-  "Captura profissional 360°",
-  "Edição e tratamento das imagens",
-  "Tour virtual interativo",
-  "Link para compartilhamento",
-  "Compatível com celular e computador",
-  "Integração com website via iframe",
-  "Hospedagem gratuita por 1 ano",
+  "pricingPage.residential.feature.1",
+  "pricingPage.residential.feature.2",
+  "pricingPage.residential.feature.3",
+  "pricingPage.residential.feature.4",
+  "pricingPage.residential.feature.5",
+  "pricingPage.residential.feature.6",
+  "pricingPage.residential.feature.7",
 ];
 
 const freeItems = [
-  "Mini tour de demonstração 360°",
-  "Publicado online durante 10 dias",
-  "Sem contrato",
-  "Sem compromisso",
-  "Com o logotipo da Visitar Studio",
-  "Desativação automática ao final do período de teste",
+  "pricingPage.demo.feature.1",
+  "pricingPage.demo.feature.2",
+  "pricingPage.demo.feature.3",
+  "pricingPage.demo.feature.4",
+  "pricingPage.demo.feature.5",
+  "pricingPage.demo.feature.6",
 ];
 
 const productionItems = [
-  "Captura profissional das imagens 360°",
-  "Edição e tratamento das imagens",
-  "Montagem completa do tour virtual",
-  "Inserção de hotspots e navegação interativa",
-  "Publicação na plataforma da Visitar Studio",
-  "Integração com website através de link ou iframe",
-  "Publicação no Google Street View (opcional)",
+  "pricingPage.production.feature.1",
+  "pricingPage.production.feature.2",
+  "pricingPage.production.feature.3",
+  "pricingPage.production.feature.4",
+  "pricingPage.production.feature.5",
+  "pricingPage.production.feature.6",
+  "pricingPage.production.feature.7",
 ];
 
 const Pricing = () => {
+  const { t } = useLanguage();
   const [region, setRegion] = useState<Region>("EU");
   const p = pricing[region];
+  const format = (key: string, values: Record<string, string>) =>
+    Object.entries(values).reduce(
+      (text, [name, value]) => text.replace(`{${name}}`, value),
+      t(key)
+    );
 
   const plans = [
     {
-      title: "Plano Mensal",
-      subtitle: "Sem fidelidade",
+      title: t("pricingPage.plans.monthly.title"),
+      subtitle: t("pricingPage.plans.monthly.subtitle"),
       price: p.plans.monthly.price,
-      period: p.plans.monthly.period,
+      period: t("pricingPage.period.month"),
       support: null as string | null,
       features: [
-        "Sem compromisso de permanência",
-        "Cancelamento a qualquer momento com 30 dias de aviso prévio",
-        "Inclui hospedagem, manutenção e suporte técnico",
-        "Atualizações básicas e monitoramento",
+        t("pricingPage.plans.monthly.feature.1"),
+        t("pricingPage.plans.monthly.feature.2"),
+        t("pricingPage.plans.monthly.feature.3"),
+        t("pricingPage.plans.monthly.feature.4"),
       ],
       note: null as string | null,
       highlighted: false,
     },
     {
-      title: "Plano Anual com Pagamento Mensal",
-      subtitle: "Compromisso mínimo de 12 meses",
+      title: t("pricingPage.plans.annualMonthly.title"),
+      subtitle: t("pricingPage.plans.annualMonthly.subtitle"),
       price: p.plans.annualMonthly.price,
-      period: p.plans.annualMonthly.period,
-      support: p.plans.annualMonthly.total,
+      period: t("pricingPage.period.month"),
+      support: format("pricingPage.plans.annualMonthly.total", {
+        amount: p.plans.annualMonthly.total,
+      }),
       features: [
-        "Inclui todos os serviços do Plano Mensal",
-        "Desconto de 33% em relação ao plano sem fidelidade",
+        t("pricingPage.plans.shared.monthlyIncluded"),
+        t("pricingPage.plans.annualMonthly.feature.1"),
       ],
-      note: "Em caso de cancelamento antes de completar os 12 meses, será cobrada uma penalidade equivalente a 50% do valor das mensalidades restantes.",
+      note: t("pricingPage.plans.annualMonthly.note"),
       highlighted: true,
     },
     {
-      title: "Plano Anual",
-      subtitle: "Pagamento antecipado",
+      title: t("pricingPage.plans.annual.title"),
+      subtitle: t("pricingPage.plans.annual.subtitle"),
       price: p.plans.annual.price,
-      period: p.plans.annual.period,
-      support: p.plans.annual.equivalent,
+      period: t("pricingPage.period.year"),
+      support: format("pricingPage.plans.annual.equivalent", {
+        amount: p.plans.annual.equivalent,
+      }),
       features: [
-        "Inclui todos os serviços do Plano Mensal",
-        "Melhor relação custo-benefício",
+        t("pricingPage.plans.shared.monthlyIncluded"),
+        t("pricingPage.plans.annual.feature.1"),
       ],
       note: null,
       highlighted: false,
@@ -119,7 +130,7 @@ const Pricing = () => {
                 transition={{ duration: 0.5 }}
                 className="inline-block text-muted-foreground text-xs font-medium tracking-[0.3em] uppercase mb-8"
               >
-                Investimento
+                {t("pricingPage.hero.badge")}
               </motion.span>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
@@ -127,7 +138,7 @@ const Pricing = () => {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-foreground mb-6 leading-[1.1]"
               >
-                Investimento
+                {t("pricingPage.hero.title")}
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -135,7 +146,7 @@ const Pricing = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-base md:text-lg text-muted-foreground mb-6 font-light leading-relaxed"
               >
-                Valores para tours virtuais e experiências digitais da Visitar Studio.
+                {t("pricingPage.hero.subtitle")}
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -143,8 +154,7 @@ const Pricing = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-sm text-muted-foreground/80 font-light leading-relaxed max-w-xl mx-auto"
               >
-                Todos os projetos incluem captação profissional, edição e entrega
-                otimizada para compartilhamento online.
+                {t("pricingPage.hero.note")}
               </motion.p>
             </div>
 
@@ -185,13 +195,13 @@ const Pricing = () => {
               className="text-center max-w-2xl mx-auto mb-16"
             >
               <span className="inline-block text-muted-foreground text-xs font-medium tracking-[0.3em] uppercase mb-4">
-                Residencial
+                {t("pricingPage.residential.badge")}
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-foreground mb-5">
-                Para seu imóvel
+                {t("pricingPage.residential.title")}
               </h2>
               <p className="text-base text-muted-foreground font-light leading-relaxed">
-                Tours virtuais para imóveis, arquitetura e mercado imobiliário.
+                {t("pricingPage.residential.subtitle")}
               </p>
             </motion.div>
 
@@ -208,16 +218,16 @@ const Pricing = () => {
                     {p.residential.price}
                   </span>
                   <p className="text-xs text-muted-foreground mt-3 tracking-[0.2em] uppercase">
-                    Projeto único
+                    {t("pricingPage.residential.priceLabel")}
                   </p>
                 </div>
                 <div className="border-t border-border pt-10">
                   <ul className="space-y-4">
-                    {residentialFeatures.map((item) => (
-                      <li key={item} className="flex items-start gap-3">
+                    {residentialFeatures.map((key) => (
+                      <li key={key} className="flex items-start gap-3">
                         <Check className="w-4 h-4 text-foreground mt-0.5 stroke-[1.5] shrink-0" />
                         <span className="text-sm text-foreground/80 leading-relaxed">
-                          {item}
+                          {t(key)}
                         </span>
                       </li>
                     ))}
@@ -225,8 +235,7 @@ const Pricing = () => {
                 </div>
                 <div className="border-t border-border pt-8 mt-10">
                   <p className="text-xs text-muted-foreground italic leading-relaxed">
-                    Após 12 meses, a renovação da hospedagem pode ser solicitada
-                    opcionalmente.
+                    {t("pricingPage.residential.note")}
                   </p>
                 </div>
               </div>
@@ -245,13 +254,13 @@ const Pricing = () => {
               className="text-center max-w-2xl mx-auto"
             >
               <span className="inline-block text-muted-foreground text-xs font-medium tracking-[0.3em] uppercase mb-4">
-                Negócios
+                {t("pricingPage.business.badge")}
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-foreground mb-5">
-                Para seu negócio
+                {t("pricingPage.business.title")}
               </h2>
               <p className="text-base text-muted-foreground font-light leading-relaxed">
-                Experiências digitais para restaurantes, hotéis, lojas e negócios físicos.
+                {t("pricingPage.business.subtitle")}
               </p>
             </motion.div>
           </div>
@@ -269,28 +278,27 @@ const Pricing = () => {
                 className="bg-background border border-border p-10 md:p-14"
               >
                 <span className="inline-block text-muted-foreground text-xs font-medium tracking-[0.3em] uppercase mb-6">
-                  Demonstração
+                  {t("pricingPage.demo.badge")}
                 </span>
                 <h3 className="text-2xl md:text-3xl font-display font-semibold text-foreground mb-3">
-                  Mini Tour Promocional Gratuito
+                  {t("pricingPage.demo.title")}
                 </h3>
                 <p className="text-sm text-muted-foreground mb-10">
-                  10 dias de demonstração sem custo
+                  {t("pricingPage.demo.subtitle")}
                 </p>
                 <ul className="space-y-4 mb-10">
-                  {freeItems.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
+                  {freeItems.map((key) => (
+                    <li key={key} className="flex items-start gap-3">
                       <Check className="w-4 h-4 text-foreground mt-0.5 stroke-[1.5] shrink-0" />
                       <span className="text-sm text-foreground/80 leading-relaxed">
-                        {item}
+                        {t(key)}
                       </span>
                     </li>
                   ))}
                 </ul>
                 <div className="border-t border-border pt-8">
                   <p className="text-sm text-muted-foreground italic leading-relaxed">
-                    Ideal para que o cliente veja o próprio negócio em um tour
-                    virtual real antes de contratar.
+                    {t("pricingPage.demo.note")}
                   </p>
                 </div>
               </motion.div>
@@ -309,25 +317,24 @@ const Pricing = () => {
                 transition={{ duration: 0.5 }}
               >
                 <span className="inline-block text-muted-foreground text-xs font-medium tracking-[0.3em] uppercase mb-6">
-                  Produção
+                  {t("pricingPage.production.badge")}
                 </span>
                 <h3 className="text-2xl md:text-3xl font-display font-semibold text-foreground mb-4">
-                  Taxa Inicial de Produção
+                  {t("pricingPage.production.title")}
                 </h3>
                 <p className="text-3xl md:text-4xl font-display font-semibold text-foreground mb-6">
-                  {p.production.from}
+                  {format("pricingPage.production.from", { amount: p.production.price })}
                 </p>
                 <p className="text-sm text-muted-foreground mb-10 leading-relaxed max-w-2xl">
-                  O valor da produção varia de acordo com o tamanho, a
-                  complexidade e o tempo necessário para a captação do espaço.
+                  {t("pricingPage.production.subtitle")}
                 </p>
                 <div className="border-t border-border pt-10">
                   <ul className="space-y-4">
-                    {productionItems.map((item) => (
-                      <li key={item} className="flex items-start gap-3">
+                    {productionItems.map((key) => (
+                      <li key={key} className="flex items-start gap-3">
                         <Check className="w-4 h-4 text-foreground mt-0.5 stroke-[1.5] shrink-0" />
                         <span className="text-sm text-foreground/80 leading-relaxed">
-                          {item}
+                          {t(key)}
                         </span>
                       </li>
                     ))}
@@ -349,10 +356,10 @@ const Pricing = () => {
               className="text-center max-w-2xl mx-auto mb-20"
             >
               <span className="inline-block text-muted-foreground text-xs font-medium tracking-[0.3em] uppercase mb-4">
-                Hospedagem
+                {t("pricingPage.hosting.badge")}
               </span>
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-foreground mb-5">
-                Planos de Hospedagem
+                {t("pricingPage.hosting.title")}
               </h3>
             </motion.div>
 
@@ -370,7 +377,7 @@ const Pricing = () => {
                 >
                   {plan.highlighted && (
                     <span className="inline-block text-foreground text-[10px] font-medium tracking-[0.3em] uppercase mb-4">
-                      Recomendado
+                      {t("pricingPage.plans.recommended")}
                     </span>
                   )}
                   <h4 className="text-lg font-display font-semibold text-foreground mb-2">
@@ -420,9 +427,7 @@ const Pricing = () => {
               transition={{ duration: 0.5 }}
               className="text-xs text-muted-foreground text-center max-w-2xl mx-auto mt-16 leading-relaxed"
             >
-              Os tours permanecem hospedados na infraestrutura da Visitar Studio
-              e estarão disponíveis somente enquanto o serviço estiver ativo e
-              com os pagamentos em dia.
+              {t("pricingPage.hosting.note")}
             </motion.p>
           </div>
         </section>

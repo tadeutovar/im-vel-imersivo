@@ -459,7 +459,7 @@ const enExtras: Record<string, string> = {
   "pricingPage.plans.shared.monthlyIncluded": "Includes all Monthly Plan services",
 
   "ng.hero.badge": "Business",
-  "ng.hero.title": "Virtual Tours for Business",
+  "ng.hero.title": "Virtual Tours for Businesses",
   "ng.hero.subtitle": "Transform your commercial space into a modern and immersive digital experience.",
   "ng.hero.cta": "Request a quote",
 

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/visitarstudio-logo-removebg.png";
+import logo from "../assets/testelogo.png";
 import LanguageSelector from "@/components/LanguageSelector";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -81,7 +81,7 @@ const Header = () => {
               alt="Logo Visitar Studio"
               className="w-10 h-10 object-contain"
             />
-            <span className="font-display font-semibold text-xl text-foreground tracking-wide hidden sm:block">
+            <span className="font-display font-semibold text-xl text-primary tracking-wide hidden sm:block">
               Visitar Studio
             </span>
           </Link>

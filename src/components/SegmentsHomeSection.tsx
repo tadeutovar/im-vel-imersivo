@@ -3,21 +3,21 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import portfolioFendi from "@/assets/portfolio-fendi-home.jpeg";
-import portfolioBcn from "@/assets/hero-business.png";
+import portfolioBcn from "@/assets/portfolio-bcn.jpg";
 
 const SegmentsHomeSection = () => {
   const { t } = useLanguage();
 
   const cards = [
     {
-      image: portfolioFendi,
+      image: portfolioBcn,
       titleKey: "home.seg.card1.title",
       descKey: "home.seg.card1.desc",
       ctaKey: "home.seg.card1.cta",
       to: "/imoveis",
     },
     {
-      image: portfolioBcn,
+      image: portfolioFendi,
       titleKey: "home.seg.card2.title",
       descKey: "home.seg.card2.desc",
       ctaKey: "home.seg.card2.cta",

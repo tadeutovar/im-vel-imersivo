@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import portfolio1 from "@/assets/portfolio-urca.jpeg";
-import portfolio2 from "@/assets/portfolio-bcn.jpg";
+import portfolio2 from "@/assets/hero-business.png";
 import portfolio3 from "@/assets/portfolio-praiadabarra2.jpeg";
 import portfolio4 from "@/assets/portfolio-fendi-home.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -15,29 +15,15 @@ const PortfolioSection = ({ variant = "alt" }: { variant?: "alt" | "default" }) 
       image: portfolio4,
       titleKey: "portfolio.project4.title",
       location: "London, England",
-      typeKey: "portfolio.type.residential",
+      typeKey: "portfolio.type.commercial",
       link: "https://tour.visitarstudio.com/london-fendi-home"
     },
     {
       image: portfolio2,
-      titleKey: "portfolio.project2.title",
-      location: "Barcelona, Spain",
-      typeKey: "portfolio.type.residential",
-      link: "https://tour.visitarstudio.com/montgat-house-001"
-    },
-    {
-      image: portfolio3,
-      titleKey: "portfolio.project3.title",
-      location: "Rio de de Janeiro, Brazil",
-      typeKey: "portfolio.type.residential",
-      link: "https://tour.visitarstudio.com/rj-exemplo-01"
-    },
-    {
-      image: portfolio1,
-      titleKey: "portfolio.project1.title",
-      location: "Rio de Janeiro, Brazil",
-      typeKey: "portfolio.type.residential",
-      link: "https://tour.visitarstudio.com/casa-urca-001"
+      titleKey: "GTRentals",
+      location: "Mallorca, Spain",
+      typeKey: "portfolio.type.commercial",
+      link: "https://tour.visitarstudio.com/share/collection/7T7qz?logo=-1&info=0&fs=0&vr=0&zoom=1&gyro=0&autorotate=0.06&thumbs=1&inst=0&keys=0"
     },
     
   ];
@@ -63,7 +49,7 @@ const PortfolioSection = ({ variant = "alt" }: { variant?: "alt" | "default" }) 
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <a 
                 key={index}

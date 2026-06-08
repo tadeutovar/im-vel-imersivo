@@ -4,44 +4,46 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 11%;
+    /* Visitar Studio — Premium Dark (graphite + champagne) */
+    --background: 223 11% 12%;        /* #1C1E23 */
+    --foreground: 40 13% 95%;         /* #F5F4F2 */
 
-    --card: 40 10% 96%;
-    --card-foreground: 0 0% 11%;
+    --card: 222 11% 18%;              /* #2A2D34 */
+    --card-foreground: 40 13% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 11%;
+    --popover: 222 11% 18%;
+    --popover-foreground: 40 13% 95%;
 
-    --primary: 0 0% 11%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary = champagne accent */
+    --primary: 36 41% 74%;            /* #D8C2A1 */
+    --primary-foreground: 223 11% 12%;
 
-    --secondary: 30 8% 91%;
-    --secondary-foreground: 0 0% 11%;
+    --secondary: 225 10% 15%;         /* #23252B */
+    --secondary-foreground: 40 13% 95%;
 
-    --muted: 30 6% 84%;
-    --muted-foreground: 0 0% 61%;
+    --muted: 222 11% 18%;
+    --muted-foreground: 225 6% 74%;   /* #B8BAC0 */
 
-    /* accent is now a neutral mid-grey — no gold */
-    --accent: 0 0% 61%;
-    --accent-foreground: 0 0% 11%;
+    --accent: 36 41% 74%;             /* champagne */
+    --accent-foreground: 223 11% 12%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 40 13% 95%;
 
-    --border: 0 0% 84%;
-    --input: 0 0% 84%;
-    --ring: 0 0% 11%;
+    --border: 224 9% 25%;             /* #3A3D45 */
+    --input: 224 9% 25%;
+    --ring: 36 41% 74%;
 
     --radius: 0.125rem;
 
     /* Palette tokens */
-    --off-white: 60 3% 95%;
-    --beige: 36 14% 88%;
-    --grey-light: 0 0% 84%;
-    --grey-mid: 0 0% 61%;
-    --graphite: 0 0% 11%;
-    --section-alt: 36 10% 92%;
+    --off-white: 40 13% 95%;
+    --beige: 36 41% 74%;
+    --grey-light: 224 9% 25%;
+    --grey-mid: 225 6% 74%;
+    --graphite: 223 11% 12%;
+    --section-alt: 225 10% 15%;       /* #23252B */
+    --champagne: 36 41% 74%;
 
     /* Shadows — very subtle */
     --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.03);

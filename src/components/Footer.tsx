@@ -20,7 +20,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
-            <span className="font-display font-semibold text-xl text-background tracking-wide">
+            <span className="font-display font-semibold text-xl text-foreground tracking-wide">
               {t("footer.brand")}
             </span>
             <p className="text-foreground/40 text-sm mt-4 max-w-sm leading-relaxed">
@@ -92,7 +92,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-background/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-foreground/30 text-xs">
             © {currentYear} Visitar Studio. {t("footer.rights")}
           </p>
